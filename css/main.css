@@ -1,0 +1,80 @@
+html {
+    --black: rgba(10, 16, 13, 1);
+    --green: rgba(185, 186, 163, 1);
+    --gray: rgba(214, 213, 201, 1);
+    --silver: rgba(168, 167, 158, 1);
+    --red-brown: rgba(162, 44, 41, 1);
+    --auburn: rgba(144, 41, 35, 1);
+}
+
+body {
+    margin: 0;
+    background: var(--gray);
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.nav {
+    background: var(--silver);
+}
+
+    .navItem {
+        background: var(--red-brown);
+        outline: 2px solid var(--auburn);
+    }
+
+    .navItem:hover {
+
+    }
+
+    .navLink {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .navLink:visited {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .navLink:hover {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .navLink:active {
+        text-decoration: none;
+        color: var(--black);
+    }
+
+    .navText {
+        text-align: center;
+        vertical-align: center;
+        color: var(--gray);
+        font-size: 1.2rem;
+        margin: 0.4rem 1rem 0.4rem 1rem;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+.flexBox {
+    width: 20%;
+    justify-content: space-between;
+    margin: 1rem auto 1rem auto;
+    max-width: 17rem;
+}
+
+.flexStart {
+    margin: 1rem auto 1rem 3rem;
+}
+
+.flexEnd {
+    margin: 1rem 3rem 1rem auto;
+}
+
+@media all and (max-width: 600px) {
+
+}
