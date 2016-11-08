@@ -37,7 +37,6 @@ body {
     position: absolute;
     top: 75%;
     left: 50%;
-    transform: (-50%, -50%);
 }
 
 .nav {
@@ -47,6 +46,7 @@ body {
     position: relative;
     flex-direction: row;
     margin: 0 0 0 0;
+    width: auto;
 }
 
     .navItem {
@@ -91,7 +91,7 @@ body {
 
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 1000px) {
     .nav {
     background: var(--silver);
     justify-content: flex-end;
@@ -103,7 +103,7 @@ body {
             background: var(--red-brown);
             outline: 2px solid var(--auburn);
             -webkit-transition-duration: 0.3s;
-            width: 10%;
+            width: 30%;
             max-width: 400px;
             display: none;
         }
@@ -140,7 +140,12 @@ body {
             align-content: center;
         }
 
-    .flexBox {
+            .containerBurger {
 
-    }
+            }
+
+            #burgerImg {
+                height: 38px;
+                width: auto;
+            }
 }

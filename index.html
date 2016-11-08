@@ -7,9 +7,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/homepage.js" defer></script>
 </head>
 <body>
     <div class="container nav">
+    <!-- Desktop -->
         <div class="navItem">
             <a href="#home" class= "navLink">
                 <div>
@@ -38,29 +40,32 @@
                 </div>
             </a>
         </div>
-        <div class="burger">
-            <img src="img/menu-burger.svg" alt="Menu"/>
-            <div class="containerBurger" id="burger" style="display: none">
-                <div class="burgerItem">
-                    <a href="#home">
-                        <p></p>
+    <!-- Mobile/Small Screens -->
+        <div class="burger" onclick="burgerClick()">
+            <img src="img/menu-burger.svg" alt="Menu" id="burgerImg"/>
+            <div class="containerBurger" id="burgerList" style="display: none;">
+                <div class="navItem burgerItem">
+                    <a href="#home" class= "navLink">
+                        <div>
+                            <p class="navText">Home</p>
+                        </div>
                     </a>
                 </div>
-                <div class="burgerItem">
+                <div class="navItem burgerItem">
                     <a href="#about" class= "navLink">
                         <div>
                             <p class="navText">About Me</p>
                         </div>
                     </a>
                 </div>
-                <div class="burgerItem">
-                    <a href="https://github.com/colingreybosh" class= "navLink" target="_blank">
+                <div class="navItem burgerItem">
+                    <a href="#home" class= "navLink" target="_blank">
                         <div>
                             <p class="navText">GitHub</p>
                         </div>
                     </a>
                 </div>
-                <div class="burgerItem">
+                <div class="navItem burgerItem">
                     <a href="#resume" class= "navLink">
                         <div>
                             <p class="navText">Résumé</p>
@@ -71,8 +76,8 @@
         </div>
     </div>
     <div class="billboard">
-            <img src="https://upload.wikimedia.org/wikipedia/en/6/61/Appalachian_Mountains.jpg" class="billboardImage">
-            <h1 class="billboardText">Colin Greybosh</h1>
+            <img src="img/landscape.jpeg" class="billboardImage">
+            <h1 class="billboardText"></h1>
     </div>
     <div class="container" id="home">
         <div class="flexBox info" id="about">
