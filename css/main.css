@@ -16,8 +16,20 @@ h2 {
     text-align: center;
 }
 
+h4 {
+    margin: 0.4rem;
+}
+
 p a {
     color: #FF3103;
+}
+
+ul {
+    margin: 0;
+}
+
+ul li p {
+    margin: 0.2rem;
 }
 
 ::-webkit-scrollbar {
