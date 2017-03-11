@@ -12,6 +12,14 @@ body {
     line-height: 145%;
 }
 
+h2 {
+    text-align: center;
+}
+
+p a {
+    color: #FF3103;
+}
+
 ::-webkit-scrollbar {
     height: 12px;
     width: 12px;
@@ -28,71 +36,83 @@ body {
     -webkit-border-radius: 0;
 }
 
-.name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 75%;
-    margin: 2rem auto 0 auto;
+.content {
+    margin: 0 auto;
+    padding: 0;
+    width: 65%;
+    height: auto;
 }
-    .name p {
-        margin: 0;
-        font-family: "Segoe UI";
-        font-weight: 600;
-        font-size: 3rem;
-    }
 
-.header {
-    display: flex;
-    flex-direction: row;
-    width: 75%;
-    margin: 2rem auto 0 auto;
-    padding: 1px;
-    align-content: center;
-    justify-content: center;
-    background: black;
-}
-    .header a {
+    .name {
         display: flex;
-        justify-content: center;
         align-items: center;
-        width: 33.33%;
-        margin: 1px;
-        padding: 0.25rem 0;
-        height: 2rem;
-        text-decoration: none;
-        color: black;
-        background: #eee;
-        font-size: 1.5rem;
-        font-weight: 600;
-        -webkit-transition-duration: 0.3s;
-    }
-
-    .header a:hover {
-        color: black;
-        background: #fff;
-    }
-
-    .header a:active {
-        color: black;
-        background: #eee;
-    }
-
-.body {
-    display: flex;
-    width: 75%;
-    margin: 0.5rem auto;
-    align-content: center;
-}
-    .imgContainer {
+        justify-content: center;
         width: 100%;
-        height: auto;
+        margin: 2rem auto 0 auto;
     }
-        .imgContainer img {
+        .name p {
+            margin: 0;
+            font-family: "Segoe UI";
+            font-weight: 600;
+            font-size: 3rem;
+        }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 2rem auto 0 auto;
+        padding: 1px;
+        align-content: center;
+        justify-content: center;
+        background: black;
+    }
+        .header a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 33.33%;
+            margin: 1px;
+            padding: 0.25rem 0;
+            height: 2rem;
+            text-decoration: none;
+            color: black;
+            background: #eee;
+            font-size: 1.5rem;
+            font-weight: 600;
+            -webkit-transition-duration: 0.3s;
+        }
+
+        .header a:hover {
+            color: black;
+            background: #fff;
+        }
+
+        .header a:active {
+            color: black;
+            background: #eee;
+        }
+
+    .body {
+        display: flex;
+        width: 100%;
+        margin: 0.5rem auto;
+        align-content: center;
+    }
+        .imgContainer {
             width: 100%;
             height: auto;
-            border-radius: 10px;
         }
+            .imgContainer img {
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+            }
+    .text {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 
 @media screen and (orientation: portrait) {
 
@@ -126,46 +146,72 @@ body {
     -webkit-border-radius: auto;
 }
 
-.name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.content {
+    margin: 0 auto;
+    padding: 0;
     width: 100%;
-    margin: 1rem auto;
-}
-    .name p {
-        margin: 0;
-        font-family: "Segoe UI";
-        font-weight: 600;
-        font-size: 2rem;
-    }
-
-.header {
-    display: block;
     height: auto;
-    width: 100%;
-    margin: 0;
-    padding: 2px 0;
-    background: black;
 }
-    .header a {
+
+    .name {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
         width: 100%;
-        height: auto;
-        margin: 0;
-        text-decoration: none;
-        color: black;
-        background: #eee;
-        font-size: 1.5rem;
-        font-weight: 500;
+        margin: 1rem auto;
     }
-        .header a p {
-            margin: 0.2rem auto;
+        .name p {
+            margin: 0;
+            font-family: "Segoe UI";
+            font-weight: 600;
+            font-size: 2rem;
         }
 
-    #headerCenter {
-        margin: 2px 0;
+    .header {
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: 0;
+        padding: 2px 0;
+        background: black;
+    }
+        .header a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            text-decoration: none;
+            color: black;
+            background: #eee;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+            .header a p {
+                margin: 0.2rem auto;
+            }
+
+        #headerCenter {
+            margin: 2px 0;
+        }
+
+    .body {
+        display: flex;
+        width: 100%;
+        margin: 0rem auto;
+        align-content: center;
+    }
+        .imgContainer {
+            width: 100%;
+            height: auto;
+        }
+            .imgContainer img {
+                width: 100%;
+                height: auto;
+                border-radius: 0;
+            }
+    .text {
+        width: 90%;
     }
 }
