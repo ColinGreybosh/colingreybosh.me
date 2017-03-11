@@ -84,6 +84,15 @@ body {
     margin: 0.5rem auto;
     align-content: center;
 }
+    .imgContainer {
+        width: 100%;
+        height: auto;
+    }
+        .imgContainer img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
 
 @media screen and (orientation: portrait) {
 
