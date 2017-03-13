@@ -69,7 +69,7 @@ ul li p {
             font-size: 3rem;
         }
 
-    .header {
+    .nav {
         display: flex;
         flex-direction: row;
         width: 100%;
@@ -79,7 +79,7 @@ ul li p {
         justify-content: center;
         background: black;
     }
-        .header a {
+        .nav a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -95,12 +95,12 @@ ul li p {
             -webkit-transition-duration: 0.3s;
         }
 
-        .header a:hover {
+        .nav a:hover {
             color: black;
             background: #fff;
         }
 
-        .header a:active {
+        .nav a:active {
             color: black;
             background: #eee;
         }
@@ -179,7 +179,7 @@ body {
             font-size: 2rem;
         }
 
-    .header {
+    .nav {
         display: block;
         height: auto;
         width: 100%;
@@ -187,7 +187,7 @@ body {
         padding: 2px 0;
         background: black;
     }
-        .header a {
+        .nav a {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -200,11 +200,11 @@ body {
             font-size: 1.5rem;
             font-weight: 500;
         }
-            .header a p {
+            .nav a p {
                 margin: 0.2rem auto;
             }
 
-        #headerCenter {
+        #navCenter {
             margin: 2px 0;
         }
 
