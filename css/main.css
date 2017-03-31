@@ -7,7 +7,7 @@ html {
 body {
     width: 100%;
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     font-size: 1.1rem;
     line-height: 145%;
 }
@@ -64,7 +64,7 @@ ul li p {
     }
         .name p {
             margin: 0;
-            font-family: "Segoe UI";
+            font-family: 'Ubuntu', 'Segoe UI', sans-serif;
             font-weight: 600;
             font-size: 3rem;
         }
@@ -91,18 +91,21 @@ ul li p {
             color: black;
             background: #eee;
             font-size: 1.5rem;
-            font-weight: 600;
+            font-weight: 300;
+            font-family: 'Ubuntu', 'Segoe UI', sans-serif;
             -webkit-transition-duration: 0.3s;
         }
 
         .nav a:hover {
-            color: black;
             background: #fff;
         }
 
         .nav a:active {
-            color: black;
             background: #eee;
+        }
+        .nav a:focus {
+            outline: none;
+            background: #fff;
         }
 
     .body {
@@ -137,7 +140,7 @@ html {
 body {
     width: 100%;
     margin: 0;
-    font-family: "Verdana", sans-serif;
+    font-family: 'Verdana', sans-serif;
     font-size: 1.3rem;
     line-height: 145%;
 }
@@ -174,7 +177,7 @@ body {
     }
         .name p {
             margin: 0;
-            font-family: "Segoe UI";
+            font-family: 'Ubuntu', 'Segoe UI', sans-serif;
             font-weight: 600;
             font-size: 2rem;
         }
@@ -239,7 +242,7 @@ html {
 body {
     width: 100%;
     margin: 0;
-    font-family: "Verdana", sans-serif;
+    font-family: 'Verdana', sans-serif;
     font-size: 1.3rem;
     line-height: 145%;
 }
@@ -276,7 +279,7 @@ body {
     }
         .name p {
             margin: 0;
-            font-family: "Segoe UI";
+            font-family: 'Ubuntu', 'Segoe UI', sans-serif;
             font-weight: 600;
             font-size: 2rem;
         }
