@@ -7,26 +7,34 @@
     <title>Home &ndash; Greybosh, Colin</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" href="CTGicon.png">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
     <div class="content">
+
         <div class="name">
             <p>Colin Greybosh</p>
         </div>
-        <div class="nav">
+
+        <nav class="nav">
+
             <a href="">
                 <p>Home</p>
             </a>
+
             <a href="" id="navCenter">
                 <p>Contact</p>
             </a>
+
             <a href="resume">
                 <p>Résumé</p>
             </a>
-        </div>
+
+        </nav>
 
         <div class="body">
-            <div class="main">
+            <!-- Default content shown -->
+            <div class="main" style="display: block">
                 <div class="imgContainer">    
                     <img src="img/landscape2.jpg"/>
                 </div>
@@ -48,7 +56,29 @@
                     <p>Voluptas consequatur minus tenetur quos rerum, similique harum nulla minima ipsam voluptate aliquam aut dolores porro sunt molestiae dolore. Numquam libero eius ratione eaque. Aut adipisci quaerat, deleniti sequi sed?</p>
                 </div>
             </div>
+            <!-- Contact form which appears when the nav button is pressed -->
+
+            <div class="contact" style="display: none">
+
+                <form method="post" action="index.php">
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" name="message"></textarea>
+
+                    <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
+
+                </form>
+
+            </div>
+
         </div>
+
     </div>
 </body>
 </html>
