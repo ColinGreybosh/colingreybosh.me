@@ -7,7 +7,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contact.css">
-    <link rel="icon" href="CTGicon.png">
+    <link rel="icon" href="../CTGicon.png">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
@@ -40,7 +40,7 @@
             
                 <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
-                <form method="post" action="index.php">
+                <form method="post">
 
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name">
