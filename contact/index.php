@@ -41,6 +41,9 @@
                 <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
                 <?php
+                    require 'vendor/autoload.php';
+                    use Mailgun\Mailgun;
+                    
                     if ($_POST['send']) {
                         $name = $_POST['name'];
                         echo '<p><strong>Name: </strong>'.name.'</p>';
