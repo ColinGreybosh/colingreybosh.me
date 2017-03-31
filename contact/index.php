@@ -48,7 +48,7 @@
                     $message = $_POST['message'];
                     echo '<p><strong>Message: </strong>'.message.'</p>';
                     $captcha = $_POST['g-recaptcha'];
-                    echo '<p><strong>Captcha: </strong>'.captcha.'</p>''
+                    echo '<p><strong>Captcha: </strong>'.captcha.'</p>';
                 ?>
 
                 <form method="post">
