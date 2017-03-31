@@ -41,14 +41,16 @@
                 <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
                 <?php
-                    $name = $_POST['name'];
-                    echo '<p><strong>Name: </strong>'.name.'</p>';
-                    $email = $_POST['email'];
-                    echo '<p><strong>Email: </strong>'.email.'</p>';
-                    $message = $_POST['message'];
-                    echo '<p><strong>Message: </strong>'.message.'</p>';
-                    $captcha = $_POST['g-recaptcha'];
-                    echo '<p><strong>Captcha: </strong>'.captcha.'</p>';
+                    if ($_POST['send']) {
+                        $name = $_POST['name'];
+                        echo '<p><strong>Name: </strong>'.name.'</p>';
+                        $email = $_POST['email'];
+                        echo '<p><strong>Email: </strong>'.email.'</p>';
+                        $message = $_POST['message'];
+                        echo '<p><strong>Message: </strong>'.message.'</p>';
+                        $captcha = $_POST['g-recaptcha'];
+                        echo '<p><strong>Captcha: </strong>'.captcha.'</p>';
+                    }
                 ?>
 
                 <form method="post">
