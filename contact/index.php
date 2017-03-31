@@ -10,8 +10,8 @@
     <link rel="icon" href="../CTGicon.png">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400" rel="stylesheet">
     <script src='https://www.google.com/recaptcha/api.js'></script>
-
 </head>
+
 <body>
     <div class="content">
 
@@ -40,16 +40,27 @@
             
                 <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
+                <?php
+                    $name = $_POST['name'];
+                    echo '<p><strong>Name: </strong>'.name.'</p>';
+                    $email = $_POST['email'];
+                    echo '<p><strong>Email: </strong>'.email.'</p>';
+                    $message = $_POST['message'];
+                    echo '<p><strong>Message: </strong>'.message.'</p>';
+                    $captcha = $_POST['g-recaptcha'];
+                    echo '<p><strong>Captcha: </strong>'.captcha.'</p>''
+                ?>
+
                 <form method="post">
 
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
 
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
 
                     <label for="message">Message:</label>
-                    <textarea name="message" id="message" name="message"></textarea>
+                    <textarea name="message" id="message" name="message" required></textarea>
 
                     <div class="doubleColumn">
                         
@@ -64,11 +75,5 @@
             </div>
         </div>
     </div>
-
-    <?php
-        foreach ($_POST as $key => $value) {
-            echo '<p><strong>' . $key.':</strong> '.$value.'</p>';
-        }
-    ?>
 </body>
 </html>
