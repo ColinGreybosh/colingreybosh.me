@@ -6,13 +6,10 @@
     require '../vendor/autoload.php';
     // Use the recaptcha library
     require '../includes/recaptchalib.php';
-    // Use the Mailgun PHP library
-    use Mailgun\Mailgun;
 
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
     $ini = parse_ini_file("../includes/config.ini");
-
     // $ini is not null, initialize these variables 
     // with the values contained within config.ini
     if (isset($ini))
@@ -20,6 +17,12 @@
         $rcSecret = $ini['recaptcha'];
         $mgSecret = $ini['mailgun'];
     }
+
+    // Use the Mailgun PHP library
+    use Mailgun\Mailgun;
+    $mailgun = new Mailgun(mgSecret, new \Http\Adapter\Guzzle6\Client());
+
+    echo $ini;
 
     //echo '<p><strong>Recaptcha:</strong> '.$rcSecret.'</p><p><strong>Mailgun:</strong> '.$mgSecret.'</p>';
     
@@ -33,10 +36,13 @@
         echo '<p><strong>Message: </strong>'.message.'</p>';
         $captcha = $_POST['g-recaptcha'];
         echo '<p><strong>Captcha: </strong>'.captcha.'</p>';
-    }
-    else 
-    {
-        echo 'This shouldn\'t appear!';
+
+        $mailgun->message()->send('colingreybosh.me', [
+          'from'    => 
+          'to'      =>
+          'subject' =>
+          'text'    =>
+        ]);
     }
 ?>
 
