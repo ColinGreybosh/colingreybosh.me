@@ -1,16 +1,24 @@
 <?php
+    // Display errors on web page
     ini_set('display_errors', 1);
 
+    // Use the composer loader
     require '../vendor/autoload.php';
+    // Use the recaptcha library
     require '../includes/recaptchalib.php';
+    // Use the Mailgun PHP library
     use Mailgun\Mailgun;
 
+    // Initialize the variable $ini with the array 
+    // returned from parsing the config.ini file 
     $ini = parse_ini_file("../includes/config.ini");
 
+    // $ini is not null, initialize these variables 
+    // with the values contained within config.ini
     if (isset($ini))
     {
-    $recapSecret = $ini[0];
-    $mgSecret = $ini[1];
+        $recapSecret = $ini['recaptcha'];
+        $mgSecret = $ini['mailgun'];
     }
 
     echo $recapSecret.'\n'.$mgSecret;
@@ -28,7 +36,7 @@
     }
     else 
     {
-
+        echo 'This shouldn\'t appear!';
     }
 ?>
 
