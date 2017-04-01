@@ -9,8 +9,8 @@
 
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
-    $ini = parse_ini_file("../includes/config.ini");
-    
+    $ini = parse_ini_file('../includes/config.ini');
+
     // $ini is not null, initialize these variables 
     // with the values contained within config.ini
     if (isset($ini))
@@ -23,12 +23,13 @@
     $response = null;
     $reCaptcha = new ReCaptcha($rcSecret);
 
-    if ($_POST["g-recaptcha-response"]) {
+    if ($_POST['g-recaptcha-response']) 
+    {
         $response = $reCaptcha->verifyResponse(
-          $_SERVER["REMOTE_ADDR"],
-          $_POST["g-recaptcha-response"]
-    );
-}
+          $_SERVER['REMOTE_ADDR'],
+          $_POST['g-recaptcha-response']
+        );
+    }
 
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
@@ -71,6 +72,7 @@
 </head>
 
 <body>
+
     <div class="content">
 
         <div class="name">
@@ -90,6 +92,7 @@
             <a href="../resume">
                 <p>Résumé</p>
             </a>
+
         </nav>
 
         <div class="body">
@@ -120,7 +123,10 @@
                 </form>
 
             </div>
+
         </div>
+
     </div>
+    
 </body>
 </html>
