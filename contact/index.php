@@ -19,12 +19,12 @@
     require 'vendor/autoload.php';
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
-    // Use the recaptcha library
-    require_once 'includes/recaptchalib.php';
-
     // Create a Mailgun method with the secret key and Guzzle
     $mg = Mailgun::create($mgSecret);
     unset($mgSecret);
+    // Use the recaptcha library
+    require_once 'includes/recaptchalib.php';
+
     
     // Initialize variables for reCAPTCHA
     $response = null;
