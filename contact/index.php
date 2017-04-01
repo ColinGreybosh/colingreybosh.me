@@ -5,7 +5,7 @@
     // Use the composer loader
     require '../vendor/autoload.php';
     // Use the recaptcha library
-    require '../includes/recaptchalib.php';
+    require_once '../includes/recaptchalib.php';
 
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
@@ -18,6 +18,10 @@
         $mgSecret = $ini['mailgun'];
     }
 
+    // Initialize variables for reCAPTCHA
+    $response = null;
+    $reCaptcha = new ReCaptcha($rcSecret);
+
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
     $mailgun = new Mailgun($mgSecret, new \Http\Adapter\Guzzle6\Client());
@@ -28,13 +32,13 @@
     if (isset($_POST['send'])) 
     {
         $name = $_POST['name'];
-        echo '<p><strong>Name: </strong>'.name.'</p>';
+        echo '<p><strong>Name: </strong>'.$name.'</p>';
         $email = $_POST['email'];
-        echo '<p><strong>Email: </strong>'.email.'</p>';
+        echo '<p><strong>Email: </strong>'.$email.'</p>';
         $message = $_POST['message'];
-        echo '<p><strong>Message: </strong>'.message.'</p>';
+        echo '<p><strong>Message: </strong>'.$message.'</p>';
         $captcha = $_POST['g-recaptcha'];
-        echo '<p><strong>Captcha: </strong>'.captcha.'</p>';
+        echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
         $mailgun->message()->send('colingreybosh.me', [
           'from'    => 'test@example.com',
