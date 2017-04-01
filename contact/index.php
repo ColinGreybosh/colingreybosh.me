@@ -3,9 +3,9 @@
     ini_set('display_errors', 1);
 
     // Use the composer loader
-    require '../vendor/autoload.php';
+    require 'vendor/autoload.php';
     // Use the recaptcha library
-    require_once '../includes/recaptchalib.php';
+    require_once 'includes/recaptchalib.php';
 
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
