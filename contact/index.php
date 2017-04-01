@@ -3,7 +3,7 @@
 
     require 'vendor/autoload.php';
     require '../includes/recaptchalib.php'
-    use Mailgun\Mailgun;
+    //use Mailgun\Mailgun;
 
     $ini = parse_ini_file("../includes/config.ini");
 
