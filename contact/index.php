@@ -14,7 +14,7 @@
     // with the values contained within config.ini
     if (isset($ini))
     {
-        echo $ini;
+        echo print_r($ini);
         $rcSecret = $ini['recaptcha'];
         $mgSecret = $ini['mailgun'];
     }
