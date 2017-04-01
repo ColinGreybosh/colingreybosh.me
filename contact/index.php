@@ -2,6 +2,8 @@
     // Display errors on web page
     ini_set('display_errors', 1);
 
+    // Initialize the variable $ini with the array 
+    // returned from parsing the config.ini file 
     $ini = parse_ini_file('includes/config.ini');
 
     // $ini is not null, initialize these variables 
@@ -15,20 +17,19 @@
 
     // Use the composer loader
     require 'vendor/autoload.php';
-    // Use the Mailgun PHP library
-    use Mailgun\Mailgun;
+    // Use the recaptcha library
+    require_once 'includes/recaptchalib.php';
     // Use guzzle
     use GuzzleHttp\Client as GuzzleClient;
     use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
-    // Use the recaptcha library
-    require_once 'includes/recaptchalib.php';
+    // Use the Mailgun PHP library
+    use Mailgun\Mailgun;
 
-
-    // Initialize the variable $ini with the array 
-    // returned from parsing the config.ini file 
     // Create a Mailgun method with the secret key and Guzzle
-    $mg = Mailgun::create($mgSecret);
+    $mg = create($mgSecret);
     unset($mgSecret);
+    
+
 
     // Initialize variables for reCAPTCHA
     $response = null;
