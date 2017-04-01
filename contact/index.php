@@ -7,8 +7,11 @@
 
     $ini = parse_ini_file("../includes/config.ini");
 
+    if (isset($ini))
+    {
     $recapSecret = $ini[0];
     $mgSecret = $ini[1];
+    }
 
     echo $recapSecret.'\n'.$mgSecret;
     
@@ -25,7 +28,7 @@
     }
     else 
     {
-        
+
     }
 ?>
 
