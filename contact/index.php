@@ -5,7 +5,12 @@
     require '../includes/recaptchalib.php'
     use Mailgun\Mailgun;
 
-    parse_ini_file("../includes/config.ini");
+    $ini = parse_ini_file("../includes/config.ini");
+
+    $recapSecret = $ini[0];
+    $mgSecret = $ini[1];
+
+    echo $recapSecret.'\n'.$mgSecret;
     
     if ($_POST['send']) {
         $name = $_POST['name'];
