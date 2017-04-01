@@ -15,7 +15,6 @@
 
     // Use the composer loader
     require 'vendor/autoload.php';
-    require 'guzzle6-adapter';
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
     // SOMETHING IS WRONG HERE
