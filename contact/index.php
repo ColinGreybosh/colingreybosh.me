@@ -23,37 +23,40 @@
     $response = null;
     $reCaptcha = new ReCaptcha($rcSecret);
 
-    if ($_POST['g-recaptcha-response']) 
-    {
-        $response = $reCaptcha->verifyResponse(
-          $_SERVER['REMOTE_ADDR'],
-          $_POST['g-recaptcha-response']
-        );
-    }
-
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
     $mailgun = new Mailgun($mgSecret, new \Http\Adapter\Guzzle6\Client());
     
     // If the captcha response is a success 
     // and the user clicked the send button
-    if (($response != null && $response->success) && (isset($_POST['send']))) 
+    if (isset($_POST['send'])) 
     {
-        $name = $_POST['name'];
+        $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
         echo '<p><strong>Name: </strong>'.$name.'</p>';
         $email = $_POST['email'];
         echo '<p><strong>Email: </strong>'.$email.'</p>';
-        $message = $_POST['message'];
+        $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
         echo '<p><strong>Message: </strong>'.$message.'</p>';
         $captcha = $_POST['g-recaptcha-response'];
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
-        $mailgun->message()->send('example.com', [
-          'from'    => 'bob@example.com', 
-          'to'      => 'sally@example.com', 
-          'subject' => 'The PHP SDK is awesome!', 
-          'text'    => 'It is so simple to send a message.'
-        ]);
+        if ($_POST['g-recaptcha-response']) 
+        {
+            $response = $reCaptcha->verifyResponse(
+              $_SERVER['REMOTE_ADDR'],
+              $_POST['g-recaptcha-response']
+            );
+        }
+
+        if ($response != null && $response->success)
+        {
+            $mailgun->message()->send('example.com', [
+              'from'    => 'bob@example.com', 
+              'to'      => 'sally@example.com', 
+              'subject' => 'The PHP SDK is awesome!', 
+              'text'    => 'It is so simple to send a message.'
+            ]);
+        }
     }
 ?>
 
@@ -127,6 +130,6 @@
         </div>
 
     </div>
-    
+
 </body>
 </html>
