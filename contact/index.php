@@ -22,10 +22,13 @@
     // Initialize variables for reCAPTCHA
     $response = null;
     $reCaptcha = new ReCaptcha($rcSecret);
+    unset($rcSecret);
 
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
-    $mailgun = new Mailgun($mgSecret, new \Http\Adapter\Guzzle6\Client());
+    // Create a Mailgun method with the secret key and Guzzle
+    $mg = Mailgun::create($mgSecret);
+    unset($mgSecret);
     
     // If the captcha response is a success 
     // and the user clicked the send button
@@ -50,7 +53,7 @@
 
         if ($response != null && $response->success)
         {
-            $mailgun->message()->send('example.com', [
+            $mg->message()->send('example.com', [
               'from'    => 'bob@example.com', 
               'to'      => 'sally@example.com', 
               'subject' => 'The PHP SDK is awesome!', 
