@@ -1,6 +1,9 @@
 <?php
     require 'vendor/autoload.php';
+    require '../include/recaptchalib.php'
     use Mailgun\Mailgun;
+
+    parse_ini_file("../includes/config.ini");
     
     if ($_POST['send']) {
         $name = $_POST['name'];
