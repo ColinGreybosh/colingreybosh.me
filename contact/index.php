@@ -12,7 +12,8 @@
 
     echo $recapSecret.'\n'.$mgSecret;
     
-    if ($_POST['send']) {
+    if (isset($_POST['send'])) 
+    {
         $name = $_POST['name'];
         echo '<p><strong>Name: </strong>'.name.'</p>';
         $email = $_POST['email'];
@@ -21,6 +22,10 @@
         echo '<p><strong>Message: </strong>'.message.'</p>';
         $captcha = $_POST['g-recaptcha'];
         echo '<p><strong>Captcha: </strong>'.captcha.'</p>';
+    }
+    else 
+    {
+        die();
     }
 ?>
 
