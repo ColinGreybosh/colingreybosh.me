@@ -17,6 +17,7 @@
     {
         $rcSecret = $ini['recaptcha'];
         $mgSecret = $ini['mailgun'];
+        $recipient = $ini['recipient'];
     }
 
     // Initialize variables for reCAPTCHA
@@ -36,7 +37,7 @@
     {
         $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
         echo '<p><strong>Name: </strong>'.$name.'</p>';
-        $email = $_POST['email'];
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         echo '<p><strong>Email: </strong>'.$email.'</p>';
         $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
         echo '<p><strong>Message: </strong>'.$message.'</p>';
@@ -53,9 +54,9 @@
 
         if ($response != null && $response->success)
         {
-            $mg->message()->send('example.com', [
-              'from'    => 'bob@example.com', 
-              'to'      => 'sally@example.com', 
+            $mg->message()->send('mg.colingreybosh.me', [
+              'from'    => 'contact@colingreybosh.me', 
+              'to'      => $recipient, 
               'subject' => 'The PHP SDK is awesome!', 
               'text'    => 'It is so simple to send a message.'
             ]);
