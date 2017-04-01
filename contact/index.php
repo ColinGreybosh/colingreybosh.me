@@ -17,20 +17,26 @@
 
     // Use the composer loader
     require 'vendor/autoload.php';
-    // Use the Mailgun PHP library
-    use Mailgun\Mailgun;
-    // Create a Mailgun method with the secret key and Guzzle
-    $mg = Mailgun::create($mgSecret);
-    unset($mgSecret);
     // Use the recaptcha library
     require_once 'includes/recaptchalib.php';
+    // Use guzzle
+    use GuzzleHttp\Client as GuzzleClient;
+    use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
+    // Use the Mailgun PHP library
+    use Mailgun\Mailgun;
 
-    
+    // Create a Mailgun method with the secret key and Guzzle
+    $client = new \Http\Adapter\Guzzle6\Client(); 
+    $mg = new \Mailgun\Mailgun($mgSecret, $client);
+    unset($mgSecret);
+
+
     // Initialize variables for reCAPTCHA
     $response = null;
     $reCaptcha = new ReCaptcha($rcSecret);
     unset($rcSecret);
 
+    
     // If the captcha response is a success 
     // and the user clicked the send button
     if (isset($_POST['send'])) 
