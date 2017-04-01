@@ -25,9 +25,6 @@
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
     $mailgun = new Mailgun($mgSecret, new \Http\Adapter\Guzzle6\Client());
-
-
-    //echo '<p><strong>Recaptcha:</strong> '.$rcSecret.'</p><p><strong>Mailgun:</strong> '.$mgSecret.'</p>';
     
     if (isset($_POST['send'])) 
     {
@@ -37,7 +34,7 @@
         echo '<p><strong>Email: </strong>'.$email.'</p>';
         $message = $_POST['message'];
         echo '<p><strong>Message: </strong>'.$message.'</p>';
-        $captcha = $_POST['g-recaptcha'];
+        $captcha = $_POST['g-recaptcha-response'];
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
         $mailgun->message()->send('colingreybosh.me', [
