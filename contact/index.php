@@ -17,7 +17,7 @@
     require 'vendor/autoload.php';
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
-    // SOMETHING IS WRONG HERE
+    // Use guzzle
     use GuzzleHttp\Client as GuzzleClient;
     use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
     // Use the recaptcha library
@@ -27,8 +27,7 @@
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
     // Create a Mailgun method with the secret key and Guzzle
-    // TODO: Fix this part
-    $mg = new Mailgun($mgSecret, new \Http\Adapter\Guzzle6\Client());
+    $mg = Mailgun::create($mgSecret);
     unset($mgSecret);
 
     // Initialize variables for reCAPTCHA
@@ -60,7 +59,6 @@
 
         if ($response != null && $response->success)
         {
-            // TODO: This won't work without line 30 or line 33 working
             $mg->message()->send('mg.colingreybosh.me', [
               'from'    => 'contact@colingreybosh.me', 
               'to'      => $recipient, 
