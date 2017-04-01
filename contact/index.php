@@ -14,6 +14,7 @@
     // with the values contained within config.ini
     if (isset($ini))
     {
+        echo $ini;
         $rcSecret = $ini['recaptcha'];
         $mgSecret = $ini['mailgun'];
     }
@@ -22,7 +23,6 @@
     use Mailgun\Mailgun;
     $mailgun = new Mailgun(mgSecret, new \Http\Adapter\Guzzle6\Client());
 
-    echo $ini;
 
     //echo '<p><strong>Recaptcha:</strong> '.$rcSecret.'</p><p><strong>Mailgun:</strong> '.$mgSecret.'</p>';
     
