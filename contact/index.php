@@ -26,7 +26,7 @@
     unset($rcSecret);
 
     // Use the Mailgun PHP library
-    use Mailgun\Mailgun;
+    namespace Mailgun\Mailgun;
     // Create a Mailgun method with the secret key and Guzzle
     $mg = Mailgun::create($mgSecret);
     unset($mgSecret);
