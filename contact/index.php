@@ -81,7 +81,7 @@
                         
                         <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
 
-                        <input type="submit" id="send" id="send" value="Send Message">
+                        <input type="submit" id="send" name="send" value="Send Message">
 
                     </div>
 
