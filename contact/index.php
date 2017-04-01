@@ -77,6 +77,10 @@
             );
 
             $mg->post('mg.colingreybosh.me', $messageBuilder->getMessage());
+
+            header('Location: https://colingreybosh.me/contact');
+            
+            exit;
         }
     }
 ?>
