@@ -1,6 +1,6 @@
 <?php
     require 'vendor/autoload.php';
-    require '../include/recaptchalib.php'
+    require '../includes/recaptchalib.php'
     use Mailgun\Mailgun;
 
     parse_ini_file("../includes/config.ini");
