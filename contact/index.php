@@ -26,8 +26,10 @@
     unset($rcSecret);
 
     // Use the Mailgun PHP library
+    // TODO: This use statement is off in some way
     use Mailgun\Mailgun;
     // Create a Mailgun method with the secret key and Guzzle
+    // TODO: Fix this part
     $mg = Mailgun::create($mgSecret);
     unset($mgSecret);
     
@@ -54,6 +56,7 @@
 
         if ($response != null && $response->success)
         {
+            // TODO: This won't work without line 30 or line 33 working
             $mg->message()->send('mg.colingreybosh.me', [
               'from'    => 'contact@colingreybosh.me', 
               'to'      => $recipient, 
