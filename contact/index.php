@@ -1,4 +1,7 @@
 <?php
+    // Use the Mailgun PHP library
+    namespace Mailgun\Mailgun;
+    
     // Display errors on web page
     ini_set('display_errors', 1);
 
@@ -25,8 +28,6 @@
     $reCaptcha = new ReCaptcha($rcSecret);
     unset($rcSecret);
 
-    // Use the Mailgun PHP library
-    namespace Mailgun\Mailgun;
     // Create a Mailgun method with the secret key and Guzzle
     $mg = Mailgun::create($mgSecret);
     unset($mgSecret);
