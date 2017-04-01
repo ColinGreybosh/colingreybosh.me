@@ -43,10 +43,13 @@
     {
         $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
         echo '<p><strong>Name: </strong>'.$name.'</p>';
+
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
         echo '<p><strong>Email: </strong>'.$email.'</p>';
+
         $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
         echo '<p><strong>Message: </strong>'.$message.'</p>';
+        
         $captcha = $_POST['g-recaptcha-response'];
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
