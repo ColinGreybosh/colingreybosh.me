@@ -18,7 +18,9 @@
     require 'guzzle6-adapter';
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
-    use php-http\guzzle6-adapter;
+    // SOMETHING IS WRONG HERE
+    use GuzzleHttp\Client as GuzzleClient;
+    use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
     // Use the recaptcha library
     require_once 'includes/recaptchalib.php';
 
