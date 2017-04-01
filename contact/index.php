@@ -1,7 +1,7 @@
 <?php
     // Use the Mailgun PHP library
-    namespace Mailgun\Mailgun;
-    
+    use ..includes\Mailgun\Mailgun;
+
     // Display errors on web page
     ini_set('display_errors', 1);
 
