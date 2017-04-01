@@ -76,7 +76,7 @@
                 '
             );
 
-            $mg->post('colingreybosh.me/messages', $messageBuilder->getMessage());
+            $mg->post('mg.colingreybosh.me', $messageBuilder->getMessage());
         }
     }
 ?>
