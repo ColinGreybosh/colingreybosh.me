@@ -10,6 +10,7 @@
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
     $ini = parse_ini_file("../includes/config.ini");
+    
     // $ini is not null, initialize these variables 
     // with the values contained within config.ini
     if (isset($ini))
@@ -22,11 +23,20 @@
     $response = null;
     $reCaptcha = new ReCaptcha($rcSecret);
 
+    if ($_POST["g-recaptcha-response"]) {
+        $response = $reCaptcha->verifyResponse(
+          $_SERVER["REMOTE_ADDR"],
+          $_POST["g-recaptcha-response"]
+    );
+}
+
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
     $mailgun = new Mailgun($mgSecret, new \Http\Adapter\Guzzle6\Client());
     
-    if (isset($_POST['send'])) 
+    // If the captcha response is a success 
+    // and the user clicked the send button
+    if (($response != null && $response->success) && (isset($_POST['send']))) 
     {
         $name = $_POST['name'];
         echo '<p><strong>Name: </strong>'.$name.'</p>';
@@ -37,11 +47,11 @@
         $captcha = $_POST['g-recaptcha-response'];
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
-        $mailgun->message()->send('colingreybosh.me', [
-          'from'    => 'test@example.com',
-          'to'      => 'test@example.com',
-          'subject' => 'Subject',
-          'text'    => 'Message'
+        $mailgun->message()->send('example.com', [
+          'from'    => 'bob@example.com', 
+          'to'      => 'sally@example.com', 
+          'subject' => 'The PHP SDK is awesome!', 
+          'text'    => 'It is so simple to send a message.'
         ]);
     }
 ?>
