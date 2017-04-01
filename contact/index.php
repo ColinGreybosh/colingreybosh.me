@@ -21,7 +21,7 @@
         $mgSecret = $ini['mailgun'];
     }
 
-    echo '<p><strong>Recaptcha:</strong> '.$rcSecret.'</p><p><strong>Mailgun:</strong> '.$mgSecret.'</p>';
+    //echo '<p><strong>Recaptcha:</strong> '.$rcSecret.'</p><p><strong>Mailgun:</strong> '.$mgSecret.'</p>';
     
     if (isset($_POST['send'])) 
     {
