@@ -38,10 +38,10 @@
         echo '<p><strong>Captcha: </strong>'.captcha.'</p>';
 
         $mailgun->message()->send('colingreybosh.me', [
-          'from'    => 
-          'to'      =>
-          'subject' =>
-          'text'    =>
+          'from'    => 'test@example.com',
+          'to'      => 'test@example.com',
+          'subject' => 'Subject',
+          'text'    => 'Message'
         ]);
     }
 ?>
