@@ -49,7 +49,7 @@
 
         $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
         echo '<p><strong>Message: </strong>'.$message.'</p>';
-        
+
         $captcha = $_POST['g-recaptcha-response'];
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
@@ -63,12 +63,20 @@
 
         if ($response != null && $response->success)
         {
-            $mg->message()->send('mg.colingreybosh.me', [
-              'from'    => 'contact@colingreybosh.me', 
-              'to'      => $recipient, 
-              'subject' => 'The PHP SDK is awesome!', 
-              'text'    => 'It is so simple to send a message.'
-            ]);
+            $messageBuilder = $mg->MessageBuilder();
+
+            $messageBuilder->setFromAddress('contact@colingreybosh.me');
+            $messageBuilder->addToRecipient($recipient);
+            $messageBuilder->setSubject('Message from website contact form.');
+            $messageBuilder->setHtmlBody(
+                '
+                <p> <b>From:</b> <?= $name ?> <<?= $email ?>> </p>
+                <br>
+                <p> <?= $message ?> </p>
+                '
+            );
+
+            $mg->post('colingreybosh.me/messages', $messageBuilder->getMessage());
         }
     }
 ?>
