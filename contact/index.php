@@ -17,11 +17,11 @@
     // with the values contained within config.ini
     if (isset($ini))
     {
-        $recapSecret = $ini['recaptcha'];
+        $rcSecret = $ini['recaptcha'];
         $mgSecret = $ini['mailgun'];
     }
 
-    echo $recapSecret.'\n'.$mgSecret;
+    echo '<p>'.$rcSecret.'</p><p>'.$mgSecret.'</p>';
     
     if (isset($_POST['send'])) 
     {
