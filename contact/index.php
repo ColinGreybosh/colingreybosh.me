@@ -69,13 +69,11 @@
             $messageBuilder->addToRecipient($recipient);
             $messageBuilder->setSubject('Message from website contact form.');
             $messageBuilder->setHtmlBody(
-                // '
-                // <p> <b>From:</b> <?= $name ?> <<?= $email ?>> </p>
-                // <br>
-                // <p> <?= $message ?> </p>
-                // '
                 '
-                <p>Is this thing on?</p>
+                <p><b>From: </b>'.$name.' <'.$email.'></p></br>
+                
+                <p><b>Message:</b></p>
+                <p>'.$message.'</p>
                 '
             );
 
