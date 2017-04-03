@@ -60,6 +60,7 @@
             <p><b>Message:</b></p>
             <p>'.$message.'</p>
         ';
+        echo $htmlBody;
 
         if ($_POST['g-recaptcha-response']) 
         {
