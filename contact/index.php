@@ -53,6 +53,14 @@
         $captcha = $_POST['g-recaptcha-response'];
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
+        $htmlBody = 
+        '
+            <p><b>From: </b>'.$name.' <'.$email.'></p></br>
+
+            <p><b>Message:</b></p>
+            <p>'.$message.'</p>
+        ';
+
         if ($_POST['g-recaptcha-response']) 
         {
             $response = $reCaptcha->verifyResponse(
@@ -68,14 +76,7 @@
             $messageBuilder->setFromAddress('contact@colingreybosh.me');
             $messageBuilder->addToRecipient($recipient);
             $messageBuilder->setSubject('Message from website contact form.');
-            $messageBuilder->setHtmlBody(
-                '
-                <p><b>From: </b>'.$name.' <'.$email.'></p></br>
-                
-                <p><b>Message:</b></p>
-                <p>'.$message.'</p>
-                '
-            );
+            $messageBuilder->setHtmlBody($htmlBody);
 
             $mg->post('mg.colingreybosh.me', $messageBuilder->getMessage());        
         }
