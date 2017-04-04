@@ -20,13 +20,13 @@
     // Use the recaptcha library
     require_once 'includes/recaptchalib.php';
     // Use guzzle
-    use GuzzleHttp\Client as GuzzleClient;
-    use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
+    //use GuzzleHttp\Client as GuzzleClient;
+    //use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
 
     // Create a Mailgun method with the secret key and Guzzle
-    $client = new \Http\Adapter\Guzzle6\Client(); 
+    //$client = new \Http\Adapter\Guzzle6\Client(); 
     $mgClient = new Mailgun($mgSecret);
     //$mgClient = new \Mailgun\Mailgun($mgSecret, $client);
     unset($mgSecret);
