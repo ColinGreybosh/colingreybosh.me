@@ -27,7 +27,8 @@
 
     // Create a Mailgun method with the secret key and Guzzle
     $client = new \Http\Adapter\Guzzle6\Client(); 
-    $mg = new \Mailgun\Mailgun($mgSecret, $client);
+    $mgClient = new Mailgun($mgSecret);
+    //$mgClient = new \Mailgun\Mailgun($mgSecret, $client);
     unset($mgSecret);
 
 
@@ -76,7 +77,7 @@
             $messageBuilder->setSubject('Message from website contact form.');
             $messageBuilder->setHtmlBody($htmlBody);
 
-            $mg->post('/https://mg.colingreybosh.me/messages}', $messageBuilder->getMessage());        
+            $mgClient->post('/https://mg.colingreybosh.me/messages}', $messageBuilder->getMessage());        
         }
     }
 ?>
