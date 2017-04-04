@@ -76,7 +76,7 @@
             $messageBuilder->setSubject('Message from website contact form.');
             $messageBuilder->setHtmlBody($htmlBody);
 
-            $mg->post('mg.colingreybosh.me', $messageBuilder->getMessage());        
+            $mg->post('{mg.colingreybosh.me}/messages', $messageBuilder->getMessage());        
         }
     }
 ?>
