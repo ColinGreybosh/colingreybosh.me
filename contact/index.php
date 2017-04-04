@@ -70,7 +70,7 @@
 
         if ($response != null && $response->success)
         {
-            $messageBuilder = $mg->MessageBuilder();
+            $messageBuilder = $mgClient->MessageBuilder();
 
             $messageBuilder->setFromAddress('contact@colingreybosh.me');
             $messageBuilder->addToRecipient($recipient);
