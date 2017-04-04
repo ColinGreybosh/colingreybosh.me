@@ -55,7 +55,7 @@
 
         $htmlBody = 
         '
-            <p><b>From: </b>'.$name.' <'.$email.'></p>
+            <p><b>From: </b>'.$name.' \<'.$email.'\></p>
             <p><b>Message:</b></p>
             <p>'.$message.'</p>
         ';
