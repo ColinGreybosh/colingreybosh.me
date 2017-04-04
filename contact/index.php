@@ -54,11 +54,9 @@
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
         $htmlBody = 
-        '
-            <p><b>From: </b>'.$name.' \<'.$email.'\></p>
+            '<p><b>From: </b>'.$name.' &lt;'.$email.'&lt;</p>
             <p><b>Message:</b></p>
-            <p>'.$message.'</p>
-        ';
+            <p>'.$message.'</p>';
         echo '<p><strong>HtmlBody: </strong></p>'.$htmlBody;
 
         if ($_POST['g-recaptcha-response']) 
