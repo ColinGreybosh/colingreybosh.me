@@ -48,7 +48,7 @@
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
         $htmlBody = 
-            '<p><b>From: </b>'.$name.' <i>&lt;'.$email.'&gt;</i></p>
+            '<p><b>From: </b>'.$name.' <i>&lt;<a href="mailto:"'.$email.' target="_top">'.$email.'</a>&gt;</i></p>
             <p><b>Message:</b></p>
             <p>'.$message.'</p>';
         echo '<p><strong>HtmlBody: </strong></p>'.$htmlBody;
