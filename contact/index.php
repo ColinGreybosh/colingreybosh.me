@@ -70,7 +70,7 @@
             $messageBuilder->setSubject('Message from website contact form.');
             $messageBuilder->setHtmlBody($htmlBody);
 
-            $mgClient->post('/https://colingreybosh.me/messages', $messageBuilder->getMessage());        
+            $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());        
         }
     }
 ?>
