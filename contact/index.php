@@ -15,13 +15,15 @@
         $recipient = $ini['recipient'];
     }
 
-    // Use the composer loader
+    // Use the composer autoloader
     require 'vendor/autoload.php';
     // Use the recaptcha library
     require_once 'includes/recaptchalib.php';
     // Use the Mailgun PHP library
     use Mailgun\Mailgun;
 
+    // Instantiate a new Mailgun client using the
+    // secret API key contained in an .ini file
     $mgClient = new Mailgun($mgSecret);
     unset($mgSecret);
 
@@ -29,7 +31,6 @@
     $response = null;
     $reCaptcha = new ReCaptcha($rcSecret);
     unset($rcSecret);
-
     
     // If the captcha response is a success 
     // and the user clicked the send button
@@ -61,15 +62,20 @@
             );
         }
 
+        // Once the captcha response is confirmed
+        // this code will execute
         if ($response != null && $response->success)
         {
+            // Compose a new message
             $messageBuilder = $mgClient->MessageBuilder();
 
+            // Add information
             $messageBuilder->setFromAddress('contact@colingreybosh.me');
             $messageBuilder->addToRecipient($recipient);
             $messageBuilder->setSubject('Message from website contact form.');
             $messageBuilder->setHtmlBody($htmlBody);
 
+            // Send message
             $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());        
         }
     }
