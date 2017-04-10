@@ -1,6 +1,6 @@
 <?php
     // Display errors on web page
-    ini_set('display_errors', false);
+    ini_set('display_errors', 1);
 
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
