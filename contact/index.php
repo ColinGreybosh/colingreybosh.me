@@ -61,19 +61,7 @@
         // this code will execute
         if ($response != null && $response->success)
         {
-            // Compose a new message
-            $messageBuilder = $mgClient->MessageBuilder();
-
-            // Add information
-            $messageBuilder->setFromAddress('contact@colingreybosh.me');
-            $messageBuilder->addToRecipient($recipient);
-            $messageBuilder->setSubject('Message from website contact form.');
-            $messageBuilder->setHtmlBody($htmlBody);
-
-            // Send message
-            $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());  
-
-            $email = $mgClient->sendMessage('mg.colingreybosh.me', array(
+            $response = $mgClient->sendMessage('mg.colingreybosh.me', array(
                 'from'    => 'contact@colingreybosh.me',
                 'to'      => $recipient,
                 'subject' => 'Message from contact form.',
@@ -152,6 +140,17 @@
 
                         <input type="submit" id="send" name="send" value="Send Message">
 
+                    </div>
+
+                    <div class="response">
+                        <?php 
+                            if ($response->http_response_body->message == "Queued. Thank you.") {
+                                echo '<p id="was-sent"></p>';
+                            }
+                            if ($response->http_response_body->message != "Queued. Thank you.") {
+                                echo '<p id="has-error"></p>';
+                            }
+                        ?>
                     </div>
 
                 </form>

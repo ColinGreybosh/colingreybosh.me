@@ -68,6 +68,14 @@ textarea {
     box-sizing: border-box;
 }
 
+#was-sent {
+    color: #FF3103;
+}
+
+#has-error {
+    color: #EF233C;
+}
+
 @media screen and (orientation: portrait) {
     form {
         width: 100%;
