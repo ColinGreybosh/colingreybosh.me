@@ -82,7 +82,7 @@
     $variables = array_keys(get_defined_vars());
 
     for ($i = 0; $i < sizeof($vars); $i++) {
-        unset($$vars[$i]);
+        unset($$variables[$i]);
     }
     unset($variables, $i);
 
