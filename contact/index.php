@@ -82,7 +82,7 @@
                 'from'    => 'contact@colingreybosh.me',
                 'to'      => $recipient,
                 'subject' => 'Message from contact form.',
-                'text'    => $htmlBody
+                'html'    => $htmlBody
             ));  
         }
     }
