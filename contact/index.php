@@ -75,7 +75,8 @@
             $messageBuilder->setHtmlBody($htmlBody);
 
             // Send message
-            $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());        
+            $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());  
+            echo "Message sent";      
         }
     }
 
