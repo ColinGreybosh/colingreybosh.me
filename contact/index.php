@@ -1,6 +1,6 @@
 <?php
     // Display errors on web page
-    ini_set('display_errors', 1);
+    ini_set('display_errors', false);
 
     // Initialize the variable $ini with the array 
     // returned from parsing the config.ini file 
@@ -37,21 +37,17 @@
     if (isset($_POST['send'])) 
     {
         $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-        echo '<p><strong>Name: </strong>'.$name.'</p>';
 
         $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-        echo '<p><strong>Email: </strong>'.$email.'</p>';
 
         $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
         $captcha = $_POST['g-recaptcha-response'];
-        echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
 
         $htmlBody = 
             '<p><b>From: </b>'.$name.' <i>&lt;<a href="mailto:"'.$email.' target="_top">'.$email.'</a>&gt;</i></p>
             <p><b>Message:</b></p>
             <p>'.$message.'</p>';
-        echo '<p><strong>HtmlBody: </strong></p>'.$htmlBody;
 
         if ($_POST['g-recaptcha-response']) 
         {
@@ -76,7 +72,6 @@
 
             // Send message
             $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());  
-            echo "Message sent";    
 
             $email = $mgClient->sendMessage('mg.colingreybosh.me', array(
                 'from'    => 'contact@colingreybosh.me',
