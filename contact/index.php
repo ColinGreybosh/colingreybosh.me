@@ -79,7 +79,7 @@
             echo "Message sent";    
 
             $email = $mgClient->sendMessage('mg.colingreybosh.me', array(
-                'from'    => $name.' <i>&lt;<a href="mailto:"'.$email.' target="_top">'.$email.'</a>&gt;</i>',
+                'from'    => 'contact@colingreybosh.me',
                 'to'      => 'Colin <i>&lt;<a href="mailto:"'.$recipient.' target="_top">'.$recipient.'</a>&gt;</i>',
                 'subject' => 'Message from contact form.',
                 'text'    => $htmlBody
