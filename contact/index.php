@@ -43,7 +43,6 @@
         echo '<p><strong>Email: </strong>'.$email.'</p>';
 
         $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-        echo '<p><strong>Message: </strong>'.$message.'</p>';
 
         $captcha = $_POST['g-recaptcha-response'];
         echo '<p><strong>Captcha: </strong>'.$captcha.'</p>';
@@ -79,6 +78,14 @@
             $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());        
         }
     }
+
+    $variables = array_keys(get_defined_vars());
+
+    for ($i = 0; $i < sizeof($vars); $i++) {
+        unset($$vars[$i]);
+    }
+    unset($variables, $i);
+
 ?>
 
 <!DOCTYPE html>
