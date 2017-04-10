@@ -76,7 +76,14 @@
 
             // Send message
             $mgClient->post('https://api.mailgun.net/v3/mg.colingreybosh.me', $messageBuilder->getMessage());  
-            echo "Message sent";      
+            echo "Message sent";    
+
+            $email = $mgClient->sendMessage('mg.colingreybosh.me', array(
+                'from'    => $name.' <i>&lt;<a href="mailto:"'.$email.' target="_top">'.$email.'</a>&gt;</i>',
+                'to'      => 'Colin <i>&lt;<a href="mailto:"'.$recipient.' target="_top">'.$recipient.'</a>&gt;</i>',
+                'subject' => 'Message from contact form.',
+                'text'    => $htmlBody
+            ));  
         }
     }
 
