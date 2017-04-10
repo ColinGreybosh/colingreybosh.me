@@ -67,6 +67,14 @@
                 'subject' => 'Message from contact form.',
                 'html'    => $htmlBody
             ));  
+
+            if ($response->http_response_body->message == "Queued. Thank you.") {
+                $popup = '<p id="was-sent">Your message has been sent!</p>';
+            }
+
+            if ($response->http_response_body->message != "Queued. Thank you.") {
+                $popup = '<p id="has-error">Something went wrong! Your message was not sent.</p>';
+            }
         }
     }
 
@@ -144,13 +152,7 @@
 
                     <div class="response">
                         <?php 
-                            if ($response->http_response_body->message == "Queued. Thank you.") {
-                                echo '<p id="was-sent"></p>';
-                            }
-                            if ($response->http_response_body->message != "Queued. Thank you.") {
-                                echo '<p id="has-error"></p>';
-                            }
-                        ?>
+                            echo $popup;
                     </div>
 
                 </form>
