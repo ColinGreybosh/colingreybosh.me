@@ -77,14 +77,6 @@
             }
         }
     }
-
-    $variables = array_keys(get_defined_vars());
-
-    for ($i = 0; $i < sizeof($variables); $i++) {
-        unset($variables[$i]);
-    }
-    unset($variables, $i);
-
 ?>
 
 <!DOCTYPE html>
@@ -153,6 +145,13 @@
                     <div class="response">
                         <?php 
                             echo $popup;
+                            
+                            $variables = array_keys(get_defined_vars());
+
+                            for ($i = 0; $i < sizeof($variables); $i++) {
+                                unset($variables[$i]);
+                            }
+                            unset($variables, $i);
                         ?>
                     </div>
 
