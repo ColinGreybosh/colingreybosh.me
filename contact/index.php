@@ -153,6 +153,7 @@
                     <div class="response">
                         <?php 
                             echo $popup;
+                        ?>
                     </div>
 
                 </form>
