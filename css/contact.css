@@ -68,6 +68,10 @@ textarea {
     box-sizing: border-box;
 }
 
+.response {
+    text-align: center;
+}
+
 #was-sent {
     color: #FF3103;
 }
