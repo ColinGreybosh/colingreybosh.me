@@ -38,6 +38,7 @@ h4 {
 
 p a {
     color: #FF3103;
+    margin: 0 !important;
 }
 
 ul li p {
@@ -70,6 +71,11 @@ ul li p {
 .text {
     display: flex;
     flex-direction: column;
+    margin: 0;
+}
+
+.text * {
+    margin: 1rem 1rem;
 }
 
     .name {
@@ -256,7 +262,10 @@ body {
                 border-radius: 0;
             }
     .text {
+        display: block;
+        margin: 0 auto;
         width: 90%;
+        padding: 0.5rem;
     }
 }
 
@@ -358,6 +367,9 @@ body {
                 border-radius: 0;
             }
     .text {
+        display: block;
         width: 90%;
+        margin: 0 auto;
+        padding: 0.5rem;
     }
 }
