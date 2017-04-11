@@ -113,6 +113,10 @@ ul li p {
             -webkit-transition-duration: 0.3s;
         }
 
+        .nav a p {
+            margin: 0;
+        }
+
         .nav a:hover {
             background: #fff;
         }
