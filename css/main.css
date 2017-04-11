@@ -37,16 +37,16 @@ ul li p {
 ::-webkit-scrollbar {
     height: 12px;
     width: 12px;
-    background: white;
+    background: #eee;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #777;
+    background: #FF3103;
     -webkit-border-radius: 0;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #bbb;
+    background: #FF5028;
     -webkit-border-radius: 0;
 }
 
