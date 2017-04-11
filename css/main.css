@@ -2,6 +2,7 @@ html {
     width: 100%;
     margin: 0;
     size: 105%;
+    overflow-y: scroll;
 }
 
 body {
