@@ -7,6 +7,7 @@ html {
 body {
     width: 100%;
     margin: 0;
+    margin-bottom: 2rem !important;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.1rem;
     line-height: 145%;
@@ -123,11 +124,24 @@ ul li p {
                 height: auto;
                 border-radius: 20px;
             }
+
     .text {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
     }
+
+    .section {
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #eee;
+        margin: 0.2rem 0;
+        padding: 0.6rem;
+        border: 2px solid black;
+        word-wrap: break-word;
+    }
+
 
 @media screen and (orientation: portrait) {
 
