@@ -2,11 +2,11 @@
     // Display errors on web page
     ini_set('display_errors', 0);
 
-    // Initialize the variable $ini with the array 
-    // returned from parsing the config.ini file 
+    // Initialize the variable $ini with the array
+    // returned from parsing the config.ini file
     $ini = parse_ini_file('includes/config.ini');
 
-    // $ini is not null, initialize these variables 
+    // $ini is not null, initialize these variables
     // with the values contained within config.ini
     if (isset($ini))
     {
@@ -31,10 +31,10 @@
     $response = null;
     $reCaptcha = new ReCaptcha($rcSecret);
     unset($rcSecret);
-    
-    // If the captcha response is a success 
+
+    // If the captcha response is a success
     // and the user clicked the send button
-    if (isset($_POST['send'])) 
+    if (isset($_POST['send']))
     {
         $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 
@@ -44,12 +44,12 @@
 
         $captcha = $_POST['g-recaptcha-response'];
 
-        $htmlBody = 
+        $htmlBody =
             '<p><b>From: </b>'.$name.' <i>&lt;<a href="mailto:"'.$email.' target="_top">'.$email.'</a>&gt;</i></p>
             <p><b>Message:</b></p>
             <p>'.$message.'</p>';
 
-        if ($_POST['g-recaptcha-response']) 
+        if ($_POST['g-recaptcha-response'])
         {
             $response = $reCaptcha->verifyResponse(
               $_SERVER['REMOTE_ADDR'],
@@ -66,7 +66,7 @@
                 'to'      => $recipient,
                 'subject' => 'Message from contact form.',
                 'html'    => $htmlBody
-            ));  
+            ));
 
             if ($response->http_response_body->message == "Queued. Thank you.") {
                 $popup = '<p id="was-sent">Your message has been sent!</p>';
@@ -103,24 +103,16 @@
 
         <nav class="nav">
 
-            <a href="..">
-                <p>Home</p>
-            </a>
-
-            <a href="" id="navCenter">
-                <p>Contact</p>
-            </a>
-
-            <a href="../resume">
-                <p>Résumé</p>
-            </a>
+            <a href="..">Home</a>
+            <a href="" id="navCenter">Contact</a>
+            <a href="../resume">Résumé</a>
 
         </nav>
 
         <div class="body">
 
             <div class="main">
-            
+
                 <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
                 <form method="post">
@@ -135,7 +127,7 @@
                     <textarea name="message" id="message" name="message" required></textarea>
 
                     <div class="doubleColumn">
-                        
+
                         <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
 
                         <input type="submit" id="send" name="send" value="Send Message">
@@ -143,7 +135,7 @@
                     </div>
 
                     <div class="response">
-                        <?php 
+                        <?php
                             echo $popup;
 
                             $variables = array_keys(get_defined_vars());
