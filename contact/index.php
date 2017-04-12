@@ -91,7 +91,7 @@
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="3 days">
 
-    <title>Contact</title>
+    <title>Contact &ndash; Greybosh, Colin</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="icon" href="../CTGicon.png">
