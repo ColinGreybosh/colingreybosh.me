@@ -118,6 +118,6 @@ textarea {
 
 @media screen and (max-width: 550px) {
     .main {
-        margin: 0 0.5rem;
+        margin: 0;
     }
 }

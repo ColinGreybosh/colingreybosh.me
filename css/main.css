@@ -169,7 +169,6 @@ ul li p {
 
 
 @media screen and (orientation: portrait) {
-
 html {
     width: 100%;
     margin: 0;
@@ -279,7 +278,6 @@ img {
 }
 
 @media screen and (max-width: 550px) {
-
 html {
     width: 100%;
     margin: 0;
