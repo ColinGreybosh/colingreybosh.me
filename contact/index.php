@@ -107,11 +107,11 @@
             <p>Colin Greybosh</p>
         </div>
 
-        <nav class="nav">
+        <nav class="nav" style="border-radius: 5px">
 
-            <a href="..">Home</a>
+            <a href=".." style="border-radius: 4px 0 0 4px">Home</a>
             <a href="" id="navCenter">Contact</a>
-            <a href="../resume">Résumé</a>
+            <a href="../resume" style="border-radius: 0 4px 4px 0">Résumé</a>
 
         </nav>
 
