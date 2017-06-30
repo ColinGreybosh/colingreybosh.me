@@ -85,13 +85,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="Want to contact me? Send me an email using my contact form!" />
-    <meta name="keywords" content="colin, greybosh, colin greybosh, math, science, stem, programming, css, js, html, c++, java, github, coding, web development, high school, hazleton, pennsylvania" />
+    <meta name="description" content="Want to contact me? Send me an email using my contact form!"/>
     <meta name="author" content="Colin Greybosh">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="3 days">
 
-    <title>Contact &ndash; Greybosh, Colin</title>
+    <title>Contact | Colin Greybosh</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="icon" href="../CTGicon.png">
