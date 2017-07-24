@@ -119,8 +119,6 @@
 
             <div class="main">
 
-                <h2>Contact Me!</h2>
-
                 <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
                 <form method="post">
