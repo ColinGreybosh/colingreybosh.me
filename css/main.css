@@ -140,7 +140,7 @@ ul li p {
             background: #fff;
         }
 
-    .body {
+    .container {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -178,7 +178,7 @@ ul li p {
 }
 
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait), (max-width: 550px) {
     html {
         width: 100%;
         margin: 0;
@@ -218,6 +218,11 @@ ul li p {
         padding: 0;
         width: 100%;
         height: auto;
+    }
+
+    .section {
+        width: 100%;
+        border-radius: 0;
     }
 
         .name {
@@ -266,10 +271,10 @@ ul li p {
                 margin: 2px 0;
             }
 
-        .body {
+        .container {
             display: flex;
             width: 100%;
-            padding: 0.5rem;
+            padding: 0.5rem 0;
             margin: 0 auto;
             align-content: center;
         }
@@ -283,126 +288,6 @@ ul li p {
                     border-radius: 0;
                 }
 
-        .text {
-            display: block;
-            margin: 0 auto;
-            width: 90%;
-            padding: 0.5rem;
-        }
-
-    #navLeft {
-        border-radius: 0;
-    }
-
-    #navRight {
-        border-radius: 0;
-    }
-}
-
-@media screen and (max-width: 550px) {
-    html {
-        width: 100%;
-        margin: 0;
-        size: 150%;
-    }
-
-    body {
-        width: 100%;
-        margin: 0 !important;
-        font-family: 'Verdana', sans-serif;
-        font-size: 1.3rem;
-        line-height: 145%;
-    }
-
-    img {
-        margin: 0;
-    }
-
-    ::-webkit-scrollbar {
-        height: auto;
-        width: auto;
-        background: auto;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: auto;
-        -webkit-border-radius: auto;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: auto;
-        -webkit-border-radius: auto;
-    }
-
-    .content {
-        margin: 0 auto;
-        padding: 0;
-        width: 100%;
-        height: auto;
-    }
-
-        .name {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            margin: 1rem auto;
-        }
-            .name p {
-                margin: 0;
-                font-family: 'Ubuntu', 'Segoe UI', sans-serif;
-                font-weight: 600;
-                font-size: 2rem;
-            }
-
-        nav {
-            display: block;
-            height: auto;
-            width: 100%;
-            margin: 0;
-            padding: 2px 0;
-            background: black;
-            border-radius: 0;
-        }
-
-            nav a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: auto;
-                margin: 0;
-                text-decoration: none;
-                color: black;
-                background: #eee;
-                font-size: 1.5rem;
-                font-weight: 500;
-            }
-
-                nav a p {
-                    margin: 0.2rem auto;
-                }
-
-            #navCenter {
-                margin: 2px 0;
-            }
-
-        .body {
-            display: flex;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0.5rem;
-            align-content: center;
-        }
-            .imgContainer {
-                width: 100%;
-                height: auto;
-            }
-                .imgContainer img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 0;
-                }
         .text {
             display: block;
             margin: 0 auto;

@@ -115,7 +115,7 @@
 
         </nav>
 
-        <div class="body">
+        <div class="container">
 
             <div class="main">
 
