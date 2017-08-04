@@ -223,6 +223,7 @@ ul li p {
     .section {
         width: 100%;
         border-radius: 0;
+        border: 2px 0 2px 0 solid black;
     }
 
         .name {

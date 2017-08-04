@@ -33,13 +33,25 @@ textarea {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    -webkit-transition-duration: 0.3s;
 }
 
+#send:hover {
+    background: #fff;
+}
 
-    input:focus, textarea:focus {
-        outline: none;
-        border: 1px solid #FF3103;
-    }
+#send:active {
+    background: #eee;
+}
+
+#send:focus {
+    background: #fff;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 1px solid #FF3103;
+}
 
 .doubleColumn {
     display: flex;
@@ -82,7 +94,7 @@ textarea {
     color: #EF233C;
 }
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: portrait), (max-width: 630px) {
     form {
         width: 100%;
         padding: 0.5rem;
@@ -100,24 +112,6 @@ textarea {
     .main p {
         width: 90%;
     }
-}
-
-@media screen and (max-width: 630px) {
-    form {
-        width: 100%;
-        padding: 0.5rem;
-    }
-
-    .doubleColumn {
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    #send {
-        width: 302px;
-    }
-
-
 }
 
 @media screen and (max-width: 550px) {
