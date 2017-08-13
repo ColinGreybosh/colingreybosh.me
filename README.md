@@ -6,6 +6,7 @@
 -
 
 ### Dependencies
--
--
--
+- [mailgun/mailgun-php](https://github.com/mailgun/mailgun-php)
+- [php-http/curl-client](https://github.com/php-http/curl-client)
+- [guzzlehttp/psr7](https://github.com/guzzle/psr7)
+- [php-http/guzzle6-adapter](https://github.com/php-http/guzzle6-adapter)
