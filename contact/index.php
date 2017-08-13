@@ -109,9 +109,9 @@
 
         <nav>
 
-            <a href=".."        id="navLeft"  >Home</a>
-            <a href=""          id="navCenter">Contact</a>
-            <a href="../resume" id="navRight" >Résumé</a>
+            <a href="/"        id="navLeft"  >Home</a>
+            <a href="."          id="navCenter">Contact</a>
+            <a href="/resume" id="navRight" >Résumé</a>
 
         </nav>
 
