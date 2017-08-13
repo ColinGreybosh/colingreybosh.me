@@ -4,11 +4,32 @@ A personal website which I am using in order to teach myself how to code HTML, C
 
 ## Table of Contents
 
+- [Webpages]()
+  - [Home](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#home)
+  - [Contact](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#contact)
+  - [Resume](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#dependencies)
 - [Dependencies](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#dependencies)
--
--
 
-### Dependencies
+## Webpages
+
+- ### [Home](https://colingreybosh.me/)
+
+    The [home page](https://colingreybosh.me/) of my website is an HTML file that contains my name, a picture, and a body of text containing information about me.
+
+
+- ### [Contact](https://colingreybosh.me/contact/)
+
+    The [contact page](https://colingreybosh.me/contact/) of my website is a PHP file that contains a contact form which delivers emails to me using the Mailgun API and a     Google reCAPTCHA form. The user must input a name, an email, a message to send to me, and complete the reCAPTCHA.
+
+
+- ### [Resume](https://colingreybosh.me/resume/)
+    
+    The [resume page](https://colingreybosh.me/resume/) of my website is an HTML file that contains a basic resume which highlights academic information, personal interests, and work experience.
+    
+
+## Dependencies
+
+- [Google reCAPTCHA](https://www.google.com/recaptcha/intro/)
 - [mailgun/mailgun-php](https://github.com/mailgun/mailgun-php)
 - [php-http/curl-client](https://github.com/php-http/curl-client)
 - [guzzlehttp/psr7](https://github.com/guzzle/psr7)
