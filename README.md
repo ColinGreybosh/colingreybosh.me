@@ -1,4 +1,7 @@
-# My Personal Website, [colingreybosh.me](https://colingreybosh.me/)
+# [colingreybosh.me](https://colingreybosh.me/)
+
+A personal website which I am using in order to teach myself how to code HTML, CSS, and PHP and how to host online content.
+
 ## Table of Contents
 
 - [Dependencies](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#dependencies)
