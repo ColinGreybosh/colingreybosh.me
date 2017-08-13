@@ -117,45 +117,43 @@
 
         <div class="container">
 
-            <div class="main">
+            <h2>Contact Me!</h2>
 
-                <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
+            <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
-                <form method="post">
+            <form method="post">
 
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
 
-                    <label for="message">Message:</label>
-                    <textarea name="message" id="message" name="message" required></textarea>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" name="message" required></textarea>
 
-                    <div class="doubleColumn">
+                <div class="doubleColumn">
 
-                        <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
+                    <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
 
-                        <input type="submit" id="send" name="send" value="Send Message">
+                    <input type="submit" id="send" name="send" value="Send Message">
 
-                    </div>
+                </div>
 
-                    <div class="response">
-                        <?php
-                            echo $popup;
+                <div class="response">
+                    <?php
+                        echo $popup;
 
-                            $variables = array_keys(get_defined_vars());
+                        $variables = array_keys(get_defined_vars());
 
-                            for ($i = 0; $i < sizeof($variables); $i++) {
-                                unset($variables[$i]);
-                            }
-                            unset($variables, $i);
-                        ?>
-                    </div>
+                        for ($i = 0; $i < sizeof($variables); $i++) {
+                            unset($variables[$i]);
+                        }
+                        unset($variables, $i);
+                    ?>
+                </div>
 
-                </form>
-
-            </div>
+            </form>
 
         </div>
 

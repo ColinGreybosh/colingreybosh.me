@@ -40,9 +40,15 @@ h4 {
     margin: 0.4rem;
 }
 
-p a {
+p a:link, p a:visited {
+    text-decoration: none;
     color: #FF3103;
     margin: 0 !important;
+}
+
+p a:hover, p a:focus, p a:active {
+    color: #FF3103;
+    text-decoration: underline;
 }
 
 ul li p {
@@ -104,7 +110,7 @@ ul li p {
         padding: 1px;
         align-content: center;
         justify-content: center;
-        background: black;
+        background: #FF3103;
         border-radius: 5px
     }
         nav a {
@@ -129,16 +135,17 @@ ul li p {
         }
 
         nav a:hover {
-            background: #fff;
+            background-color: rgba(238,238,238,0.4);
+        }
+
+        nav a:focus {
+            outline: none;
+            background-color: rgba(238,238,238,0.4);
         }
 
         nav a:active {
-            background: #eee;
-        }
-        nav a:focus {
-            outline: none;
-            background: #fff;
-        }
+            background-color: rgba(238,238,238,0.6);
+        }   
 
     .container {
         display: flex;
@@ -162,11 +169,8 @@ ul li p {
         left: 0;
         right: 0;
         width: 100%;
-        background: #eee;
         margin: 0.2rem 0;
         padding: 0.6rem;
-        border: 2px solid black;
-        border-radius: 5px;
         word-wrap: break-word;
     }
 
