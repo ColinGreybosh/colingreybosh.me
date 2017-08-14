@@ -111,7 +111,8 @@ ul li p {
         align-content: center;
         justify-content: center;
         background: #FF3103;
-        border-radius: 5px
+        border-radius: 5px;
+        box-shadow: 0 5px 5px gray;
     }
         nav a {
             display: flex;
@@ -163,6 +164,7 @@ ul li p {
                 height: auto;
                 border-radius: 20px;
                 margin-bottom: 0;
+                box-shadow: 0 5px 5px gray;
             }
 
     .section {
@@ -172,6 +174,8 @@ ul li p {
         margin: 0.2rem 0;
         padding: 0.6rem;
         word-wrap: break-word;
+        border-radius: 20px;
+        background-color: rgba(180,180,180,0.1);
     }
 
 #navLeft {
