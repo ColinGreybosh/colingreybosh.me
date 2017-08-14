@@ -1,4 +1,8 @@
 <IfModule mod_expires.c>
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://{SERVER_NAME}/$1 [R,L]
+
 ExpiresActive On
 ExpiresByType image/jpg "access 1 year"
 ExpiresByType image/jpeg "access 1 year"
