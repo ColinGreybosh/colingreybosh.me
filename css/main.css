@@ -124,7 +124,7 @@ ul li p {
             height: 2rem;
             text-decoration: none;
             color: black;
-            background: #eee;
+            background: rgb(238, 238, 238);
             font-size: 1.5rem;
             font-weight: 300;
             font-family: 'Ubuntu', 'Segoe UI', sans-serif;
@@ -136,16 +136,16 @@ ul li p {
         }
 
         nav a:hover {
-            background-color: rgba(238,238,238,0.4);
+            background-color: rgba(238, 238, 238, 0.4);
         }
 
         nav a:focus {
             outline: none;
-            background-color: rgba(238,238,238,0.4);
+            background-color: rgba(238, 238, 238, 0.4);
         }
 
         nav a:active {
-            background-color: rgba(238,238,238,0.6);
+            background-color: rgba(238, 238, 238, 0.6);
         }   
 
     .container {
@@ -164,7 +164,7 @@ ul li p {
                 height: auto;
                 border-radius: 20px;
                 margin-bottom: 0;
-                box-shadow: 0 5px 5px gray;
+                box-shadow: 0 5px 5px grey;
             }
 
     .section {
@@ -175,7 +175,7 @@ ul li p {
         padding: 0.6rem;
         word-wrap: break-word;
         border-radius: 20px;
-        background-color: rgba(180,180,180,0.1);
+        background-color: rgba(180, 180, 180, 0.1);
     }
 
 #navLeft {
@@ -253,24 +253,15 @@ ul li p {
         nav {
             display: block;
             height: auto;
-            width: 100%;
             margin: 0;
             padding: 2px 0;
-            background: black;
             border-radius: 0;
         }
 
             nav a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 width: 100%;
                 height: auto;
                 margin: 0;
-                text-decoration: none;
-                color: black;
-                background: #eee;
-                font-size: 1.5rem;
                 font-weight: 500;
             }
 
