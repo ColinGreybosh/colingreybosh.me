@@ -76,6 +76,7 @@ ul li p {
     padding: 0;
     width: 65%;
     height: auto;
+    max-width: 77rem;
 }
 
 .text {
