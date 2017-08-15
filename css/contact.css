@@ -26,20 +26,19 @@ textarea {
     display: block;
     width: 25%;
     margin: 5px 1px;
+
+    border: 1px solid #FF3103;
+
     white-space: normal;
     -webkit-transition-duration: 0.3s;
 }
 
-#send:hover {
-    background: #fff;
+#send:hover, #send:focus {
+    background: rgb(248, 124, 97);
 }
 
 #send:active {
-    background: #eee;
-}
-
-#send:focus {
-    background: #fff;
+    background: rgb(245, 163, 144);
 }
 
 input:focus, textarea:focus {
