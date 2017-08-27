@@ -91,10 +91,10 @@
     <meta name="revisit-after" content="3 days">
 
     <title>Contact | Colin Greybosh</title>
-    <link rel="stylesheet" href="/css/main.min.css"  media="screen" defer>
-    <link rel="stylesheet" href="/css/contact.min.css"  media="screen" defer>
+    <link rel="stylesheet" href="/css/main.min.css"  media="screen">
+    <link rel="stylesheet" href="/css/contact.min.css"  media="screen">
     <link rel="icon" href="/CTGicon.png">
-    <link href="/css/ubuntu.css" rel="stylesheet" defer>
+    <link href="/css/ubuntu.css" rel="stylesheet">
     <script src='https://www.google.com/recaptcha/api.js' defer></script>
 
 </head>
