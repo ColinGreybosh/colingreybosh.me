@@ -4,7 +4,7 @@ A personal website which I am using in order to teach myself how to code HTML, C
 
 ## Table of Contents
 
-- [Webpages]()
+- [Webpages](#webpages)
   - [Home](#home)
   - [Contact](#contact)
   - [Resume](#resume)
