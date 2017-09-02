@@ -5,10 +5,10 @@ A personal website which I am using in order to teach myself how to code HTML, C
 ## Table of Contents
 
 - [Webpages]()
-  - [Home](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#home)
-  - [Contact](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#contact)
-  - [Resume](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#dependencies)
-- [Dependencies](https://github.com/ColinGreybosh/colingreybosh.me/blob/master/README.md#dependencies)
+  - [Home](#home)
+  - [Contact](#contact)
+  - [Resume](#resume)
+- [Dependencies](#dependencies)
 
 ## Webpages
 
