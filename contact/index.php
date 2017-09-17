@@ -103,9 +103,9 @@
 
     <div class="content">
 
-        <div class="name">
-            <p>Colin Greybosh</p>
-        </div>
+        <header class="name">
+            <h1>Colin Greybosh</h1>
+        </header>
 
         <nav>
 
