@@ -10,7 +10,7 @@
     use Mailgun\Mailgun;
 
     // Display errors on web page
-    ini_set('display_errors', 1);
+    ini_set('display_errors', 0);
 
     // Initialize the variable $ini with the array
     // returned from parsing the config.ini file
