@@ -1,6 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <?php
+    // Use the composer autoloader
+    require 'vendor/autoload.php';
+    // Use the recaptcha library
+    require_once 'includes/recaptchalib.php';
+    // Use the Mailgun PHP library
+    use Mailgun\Mailgun;
+
     // Display errors on web page
-    ini_set('display_errors', 0);
+    ini_set('display_errors', 1);
 
     // Initialize the variable $ini with the array
     // returned from parsing the config.ini file
@@ -15,17 +25,12 @@
         $recipient = $ini['recipient'];
     }
 
-    // Use the composer autoloader
-    require 'vendor/autoload.php';
-    // Use the recaptcha library
-    require_once 'includes/recaptchalib.php';
-    // Use the Mailgun PHP library
-    use Mailgun\Mailgun;
-
     // Instantiate a new Mailgun client using the
     // secret API key contained in an .ini file
-    $mgClient = new Mailgun($mgSecret);
+    //$mgClient = new Mailgun($mgSecret);
+    $mgClient = Mailgun::create($mgSecret);
     unset($mgSecret);
+    $mgDomain = 'mg.colingreybosh.me';
 
     // Initialize variables for reCAPTCHA
     $response = null;
@@ -44,12 +49,15 @@
 
         $captcha = $_POST['g-recaptcha-response'];
 
-        $htmlBody =
-            '<p><b>From: </b>'.$name.' <i>&lt;<a href="mailto:"'.$email.' target="_top">'.$email.'</a>&gt;</i></p>
-            <p><b>Message:</b></p>
-            <p>'.$message.'</p>';
+        $textBody =
+            'From: '. $name .' <'. $email .'>\nMessage:\n'. $message; 
 
-        if ($_POST['g-recaptcha-response'])
+        $htmlBody =
+            '<html><p><b>From: </b>'. $name .' <i>&lt;<a href="mailto: '. $email .'" target="_top">'. $email .'</a>&gt;</i></p>
+            <p><b>Message:</b></p>
+            <p>'. $message .'</p></html>';
+
+        if ($captcha)
         {
             $response = $reCaptcha->verifyResponse(
               $_SERVER['REMOTE_ADDR'],
@@ -59,28 +67,29 @@
 
         // Once the captcha response is confirmed
         // this code will execute
-        if ($response != null && $response->success)
+        if ($response->success)
         {
-            $response = $mgClient->sendMessage('mg.colingreybosh.me', array(
-                'from'    => 'contact@colingreybosh.me',
-                'to'      => $recipient,
-                'subject' => 'Message from contact form.',
-                'html'    => $htmlBody
-            ));
+            $formSubmitted = false;
+            $success = true;
 
-            if ($response->http_response_body->message == "Queued. Thank you.") {
-                $popup = '<p id="was-sent">Your message has been sent!</p>';
+            $messageParams = array(
+                'from'    => 'contact@colingreybosh.com',
+                'to'      => 'colingreybosh@gmail.com',
+                'subject' => 'Message From Contact Form',
+                'text'    => $textBody,
+                'html'    => $htmlBody);
+
+            try {
+                $mgClient->messages()->send('mg.colingreybosh.me', $messageParams);
+            } catch (Exception $e) {
+                 $success = false;
             }
 
-            if ($response->http_response_body->message != "Queued. Thank you.") {
-                $popup = '<p id="has-error">Something went wrong! Your message was not sent.</p>';
-            }
+            $formSubmitted = true;
         }
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
 
     <meta charset="UTF-8">
@@ -109,8 +118,8 @@
 
         <nav>
 
-            <a href="/"        id="navLeft"  >Home</a>
-            <a href="."          id="navCenter">Contact</a>
+            <a href="/"       id="navLeft"  >Home</a>
+            <a href="."       id="navCenter">Contact</a>
             <a href="/resume" id="navRight" >Résumé</a>
 
         </nav>
@@ -142,11 +151,17 @@
 
                 <div class="response">
                     <?php
-                        echo $popup;
+                        if ($formSubmitted)
+                        {
+                            $popupText = ($success) ? '<p id="was-sent">Your message has been sent!</p>' : 
+                                                      '<p id="has-error">Something went wrong! Your message was not sent.</p>';
+                            echo $popupText;
+                        } 
 
                         $variables = array_keys(get_defined_vars());
 
-                        for ($i = 0; $i < sizeof($variables); $i++) {
+                        for ($i = 0; $i < sizeof($variables); $i++) 
+                        {
                             unset($variables[$i]);
                         }
                         unset($variables, $i);
