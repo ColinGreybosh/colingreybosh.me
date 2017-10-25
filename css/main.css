@@ -21,6 +21,7 @@ html {
     margin: 0;
     size: 105%;
     overflow-y: scroll;
+    background: #fdfdfd;
 }
 
 body {
