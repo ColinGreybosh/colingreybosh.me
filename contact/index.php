@@ -105,8 +105,8 @@
     <link rel="stylesheet" href="/css/normalize.min.css">
     <link rel="stylesheet" href="/css/main.min.css"  media="screen">
     <link rel="stylesheet" href="/css/contact.min.css"  media="screen">
+    <link rel="stylesheet" href="/css/ubuntu.css">
     <link rel="icon" href="/CTGicon.png">
-    <link href="/css/ubuntu.css" rel="stylesheet">
     <script src='https://www.google.com/recaptcha/api.js' defer></script>
 
 </head>
