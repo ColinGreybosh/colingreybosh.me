@@ -2,15 +2,17 @@
 <html lang="en">
 
 <?php
-    // Use the composer autoloader
-    require 'vendor/autoload.php';
-    // Use the recaptcha library
-    require_once 'includes/recaptchalib.php';
-    // Use the Mailgun PHP library
-    use Mailgun\Mailgun;
-
     // Display errors on web page
     ini_set('display_errors', 0);
+    
+    // Use the composer autoloader
+    require 'vendor/autoload.php';
+
+    // Use the recaptcha library
+    require_once 'includes/recaptchalib.php';
+
+    // Use the Mailgun PHP library
+    use Mailgun\Mailgun;
 
     // Initialize the variable $ini with the array
     // returned from parsing the config.ini file
