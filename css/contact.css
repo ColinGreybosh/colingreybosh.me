@@ -1,21 +1,21 @@
 form {
-    width: 100%;
     max-width: 550px;
+    width: 100%;
 }
 
 input, textarea {
-    display: block;
-    margin-right: 0 !important;
-    width: 100%;
-    margin: 0 0 8px 0;
-    padding: 2px 5px;
-    border: 1px solid black;
+    background: #eee;
     border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 3px 3px 3px gray;
+    display: block;
     font-family: inherit;
     font-size: 1.1rem;
     line-height: 145%;
-    background: #eee;
-    box-shadow: 3px 3px 3px gray;
+    margin-right: 0 !important;
+    margin: 0 0 8px 0;
+    padding: 2px 5px;
+    width: 100%;
 }
 
 textarea {
@@ -23,14 +23,12 @@ textarea {
 }
 
 #send {
-    display: block;
-    width: 25%;
-    margin: 5px 1px;
-
-    border: 1px solid #FF3103;
-
-    white-space: normal;
     -webkit-transition-duration: 0.3s;
+    border: 1px solid #FF3103;
+    display: block;
+    margin: 5px 1px;
+    white-space: normal;
+    width: 25%;
 }
 
 #send:hover, #send:focus {
@@ -42,27 +40,26 @@ textarea {
 }
 
 input:focus, textarea:focus {
-    outline: none;
     border: 1px solid #FF3103;
+    outline: none;
 }
 
 .doubleColumn {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
     margin: 0.5rem 0;
+    width: 100%;
 }
 
 .container {
-    margin: 0.7rem auto;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: 0.7rem auto;
     width: 100%;
-    /*padding-top: 1rem;*/
 }
 
 .container p {
@@ -70,11 +67,11 @@ input:focus, textarea:focus {
 }
 
 .g-recaptcha {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     margin: 0;
     width: 300px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
 }
 
 .response {
@@ -95,8 +92,8 @@ input:focus, textarea:focus {
     }
 
     form {
-        width: 100%;
         padding: 0.5rem;
+        width: 100%;
     }
 
     .doubleColumn {

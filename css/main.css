@@ -1,7 +1,7 @@
 *, *::before, *::after {
+    box-sizing: border-box !important;
     margin: 0;
     padding: 0;
-    box-sizing: border-box !important;
 }
 
 a, p, h1, h2, h4, h5, ol, ul, img, pre, code {
@@ -17,20 +17,20 @@ ol, ul {
 }
 
 html {
-    width: 100%;
-    margin: 0;
-    size: 105%;
-    overflow-y: scroll;
     background: #fdfdfd;
+    margin: 0;
+    overflow-y: scroll;
+    size: 105%;
+    width: 100%;
 }
 
 body {
-    width: 100%;
-    margin: 0;
-    margin-bottom: 2rem !important;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1.1rem;
     line-height: 145%;
+    margin-bottom: 2rem !important;
+    margin: 0;
+    width: 100%;
 }
 
 h2 {
@@ -42,9 +42,9 @@ h4 {
 }
 
 p a:link, p a:visited {
-    text-decoration: none;
     color: #FF3103;
     margin: 0 !important;
+    text-decoration: none;
 }
 
 p a:hover, p a:focus, p a:active {
@@ -57,27 +57,27 @@ ul li p {
 }
 
 ::-webkit-scrollbar {
+    background: #eee;
     height: 12px;
     width: 12px;
-    background: #eee;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #FF3103;
     -webkit-border-radius: 0;
+    background: #FF3103;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #FF5028;
     -webkit-border-radius: 0;
+    background: #FF5028;
 }
 
 .content {
+    height: auto;
     margin: 0 auto;
+    max-width: 77rem;
     padding: 0;
     width: 65%;
-    height: auto;
-    max-width: 77rem;
 }
 
 .text {
@@ -91,46 +91,46 @@ ul li p {
 }
 
     .name {
-        display: flex;
         align-items: center;
+        display: flex;
         justify-content: center;
-        width: 100%;
         margin: 2rem auto 0 auto;
+        width: 100%;
     }
         .name h1 {
-            margin: 0;
             font-family: 'Ubuntu', 'Segoe UI', sans-serif;
-            font-weight: 600;
             font-size: 3rem;
+            font-weight: 600;
+            margin: 0;
         }
 
     nav {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        margin: 2rem auto 0 auto;
-        padding: 1px;
         align-content: center;
-        justify-content: center;
         background: #FF3103;
         border-radius: 5px;
         box-shadow: 0 5px 5px gray;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2rem auto 0 auto;
+        padding: 1px;
+        width: 100%;
     }
         nav a {
-            display: flex;
-            justify-content: center;
+            -webkit-transition-duration: 0.3s;
             align-items: center;
-            width: 33.33%;
-            margin: 1px;
-            padding: 0.25rem 0;
-            height: 2rem;
-            text-decoration: none;
-            color: black;
             background: rgb(238, 238, 238);
+            color: black;
+            display: flex;
+            font-family: 'Ubuntu', 'Segoe UI', sans-serif;
             font-size: 1.5rem;
             font-weight: 300;
-            font-family: 'Ubuntu', 'Segoe UI', sans-serif;
-            -webkit-transition-duration: 0.3s;
+            height: 2rem;
+            justify-content: center;
+            margin: 1px;
+            padding: 0.25rem 0;
+            text-decoration: none;
+            width: 33.33%;
 
             /* Removes highlights created by tapping on navigation links */
             -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -160,35 +160,34 @@ ul li p {
         }   
 
     .container {
+        align-content: center;
         display: flex;
         flex-direction: column;
-        width: 100%;
         margin: 0.5rem auto;
-        align-content: center;
+        width: 100%;
     }
         .imgContainer {
-            width: 100%;
             height: auto;
+            width: 100%;
         }
             .imgContainer img {
-                width: 100%;
-                height: auto;
                 border-radius: 20px;
-                margin-bottom: 0;
                 box-shadow: 0 5px 5px grey;
+                height: auto;
+                margin-bottom: 0;
+                width: 100%;
             }
 
     .section {
+        background-color: rgba(255, 49, 3, 0.2);
+        border-radius: 10px;
+        box-shadow: 0 5px 5px gray;
         left: 0;
-        right: 0;
-        width: 100%;
         margin: 0.2rem 0;
         padding: 0.6rem;
+        right: 0;
+        width: 100%;
         word-wrap: break-word;
-        border-radius: 10px;
-        /*background-color: rgba(180, 180, 180, 0.1);*/
-        box-shadow: 0 5px 5px gray;
-        background-color: rgba(255, 49, 3, 0.2);
     }
 
 #navLeft {
@@ -202,17 +201,17 @@ ul li p {
 
 @media screen and (orientation: portrait), (max-width: 550px) {
     html {
-        width: 100%;
         margin: 0;
         size: 150%;
+        width: 100%;
     }
 
     body {
-        width: 100%;
-        margin: 0 !important;
         font-family: 'Verdana', sans-serif;
         font-size: 1.3rem;
         line-height: 145%;
+        margin: 0 !important;
+        width: 100%;
     }
 
     img {
@@ -220,62 +219,62 @@ ul li p {
     }
 
     ::-webkit-scrollbar {
+        background: auto;
         height: auto;
         width: auto;
-        background: auto;
     }
 
     ::-webkit-scrollbar-thumb {
-        background: auto;
         -webkit-border-radius: auto;
+        background: auto;
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        background: auto;
         -webkit-border-radius: auto;
+        background: auto;
     }
 
     .content {
+        height: auto;
         margin: 0 auto;
         padding: 0;
         width: 100%;
-        height: auto;
     }
 
     .section {
-        width: 100%;
-        border-radius: 0;
         border-left-style: none;
+        border-radius: 0;
         border-right-style: none;
+        width: 100%;
     }
 
         .name {
-            display: flex;
             align-items: center;
+            display: flex;
             justify-content: center;
-            width: 100%;
             margin: 1rem auto;
+            width: 100%;
         }
             .name h1 {
-                margin: 0;
                 font-family: 'Ubuntu', 'Segoe UI', sans-serif;
-                font-weight: 600;
                 font-size: 2rem;
+                font-weight: 600;
+                margin: 0;
             }
 
         nav {
+            border-radius: 0;
             display: block;
             height: auto;
             margin: 0;
             padding: 2px 0;
-            border-radius: 0;
         }
 
             nav a {
-                width: 100%;
+                font-weight: 500;
                 height: auto;
                 margin: 0;
-                font-weight: 500;
+                width: 100%;
             }
 
                 nav a p {
@@ -287,27 +286,27 @@ ul li p {
             }
 
         .container {
-            display: flex;
-            width: 100%;
-            padding: 0 0 0.5rem 0;
-            margin: 0 auto;
             align-content: center;
+            display: flex;
+            margin: 0 auto;
+            padding: 0 0 0.5rem 0;
+            width: 100%;
         }
             .imgContainer {
-                width: 100%;
                 height: auto;
+                width: 100%;
             }
                 .imgContainer img {
-                    width: 100%;
-                    height: auto;
                     border-radius: 0;
+                    height: auto;
+                    width: 100%;
                 }
 
         .text {
             display: block;
             margin: 0 auto;
-            width: 90%;
             padding: 0.5rem;
+            width: 90%;
         }
 
     #navLeft {
