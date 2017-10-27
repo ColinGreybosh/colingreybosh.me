@@ -56,12 +56,13 @@ input:focus, textarea:focus {
 }
 
 .container {
+    margin: 0.7rem auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding-top: 1rem;
+    /*padding-top: 1rem;*/
 }
 
 .container p {

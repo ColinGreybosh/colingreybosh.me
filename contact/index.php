@@ -127,7 +127,7 @@
 
         </nav>
 
-        <div class="container">
+        <div class="container section">
 
             <h2>Contact Me!</h2>
 
