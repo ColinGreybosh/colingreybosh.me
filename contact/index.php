@@ -100,6 +100,8 @@
     <meta name="author" content="Colin Greybosh">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="3 days">
+    <meta name="theme-color" content="#FF3103">
+
 
     <title>Contact | Colin Greybosh</title>
     <link rel="stylesheet" href="/css/normalize.min.css">
