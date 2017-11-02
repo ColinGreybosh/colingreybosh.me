@@ -4,12 +4,14 @@
 
 html, .container {
     background: white;
+    font-family: "Ubuntu", "Segoe UI", sans-serif;
 }
 
 nav {
     align-items: center;
     background: #C72400;
-    border-bottom: 5px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
     display: flex;
     flex-direction: row;
     height: 5rem;
@@ -83,9 +85,9 @@ nav h1::after {
     background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,1) 97%,rgba(255,255,255,1) 100%);
     background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 90%,rgba(255,255,255,1) 97%,rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
-    height: calc(100vw * 9/16);
+    height: calc(100vw * 9/16 - 5rem);
     position: relative;
-    top: calc(-100vw * 9/16 - 5rem + 6px);
+    top: calc(-100vw * 9/16 - 5rem + 7px);
     width: 100%;
 }
 
@@ -93,7 +95,8 @@ nav h1::after {
     line-height: 2.2rem;
     margin: 0 auto;
     max-width: 2000px;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
+    border-top: 3px solid black;
 }
 
 .text {
@@ -126,6 +129,40 @@ nav h1::after {
     text-decoration: underline;
 }
 
+footer {
+    align-items: stretch;
+    background: #250001;
+    border-top: 3px solid black;
+    color: #F3F3F3;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: center;
+    padding: 2rem 0;
+    width: 100%;
+}
+
+footer * {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1rem 0;
+}
+
+footer * * {
+    padding: 0rem 5rem;
+    font-size: 1.2rem;
+}
+
+footer::first-child * {
+    padding-right: 0;
+}
+
+footer::last-child * {
+    padding-left: 0;
+}
+
 @media screen and (max-width: 832px) {
     nav {
         flex-wrap: wrap;
@@ -145,7 +182,16 @@ nav h1::after {
     .container {
         margin: 0 auto;
         max-width: 2000px;
-        padding: 0.3rem 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    footer {
+        padding: 2rem 1rem;
+        flex-direction: column;
+    }
+
+    footer * * {
+        padding: 0;
     }
 }
 
