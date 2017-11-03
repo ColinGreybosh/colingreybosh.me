@@ -100,7 +100,7 @@
     <meta name="author" content="Colin Greybosh">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="3 days">
-    <meta name="theme-color" content="#FF3103">
+    <meta name="theme-color" content="#C72400">
 
 
     <title>Contact | Colin Greybosh</title>
@@ -114,70 +114,70 @@
 </head>
 
 <body>
-
-    <div class="content">
-
-        <header class="name">
-            <h1>Colin Greybosh</h1>
-        </header>
-
+    <header>
         <nav>
-
-            <a href="/"       id="navLeft"  >Home</a>
-            <a href="."       id="navCenter">Contact</a>
-            <a href="/resume" id="navRight" >Résumé</a>
-
+            <h1>Colin Greybosh</h1>
+            <div class="nav-item"><a href="/">Home</a></div>
+            <div class="nav-item"><a href="/resume">Résumé</a></div>
+            <div class="nav-item"><a href=".">Contact</a></div>
         </nav>
+    </header>
 
-        <div class="container section">
+    <div class="container text">
+        <h2>Contact Me!</h2>
+        <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
+        <form method="post">
 
-            <h2>Contact Me!</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-            <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
 
-            <form method="post">
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" name="message" required></textarea>
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            <div class="doubleColumn">
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+                <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
 
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" name="message" required></textarea>
+                <input type="submit" id="send" name="send" value="Send Message">
 
-                <div class="doubleColumn">
+            </div>
 
-                    <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
+            <div class="response">
+                <?php
+                    if ($formSubmitted)
+                    {
+                        $popupText = ($success) ? '<p id="was-sent">Your message has been sent!</p>' : 
+                                                  '<p id="has-error">Something went wrong! Your message was not sent.</p>';
+                        echo $popupText;
+                    } 
 
-                    <input type="submit" id="send" name="send" value="Send Message">
+                    $variables = array_keys(get_defined_vars());
 
-                </div>
-
-                <div class="response">
-                    <?php
-                        if ($formSubmitted)
-                        {
-                            $popupText = ($success) ? '<p id="was-sent">Your message has been sent!</p>' : 
-                                                      '<p id="has-error">Something went wrong! Your message was not sent.</p>';
-                            echo $popupText;
-                        } 
-
-                        $variables = array_keys(get_defined_vars());
-
-                        for ($i = 0; $i < sizeof($variables); $i++) 
-                        {
-                            unset($variables[$i]);
-                        }
-                        unset($variables, $i);
-                    ?>
-                </div>
-
-            </form>
-
-        </div>
-
+                    for ($i = 0; $i < sizeof($variables); $i++) 
+                    {
+                        unset($variables[$i]);
+                    }
+                    unset($variables, $i);
+                ?>
+            </div>
+        </form>
     </div>
 
+    <footer>
+        <div>
+            <p class="italic">Copyright &copy; <?php echo date("Y"); ?> Colin Greybosh</p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+
+    </footer>
 </body>
 </html>
