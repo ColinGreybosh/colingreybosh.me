@@ -115,70 +115,80 @@
 
 <body>
 
-    <div class="content">
+    <header>
 
-        <header>
+        <nav>
 
-            <nav>
+            <h1>Colin Greybosh</h1>
+            <div class="nav-item"><a href="/">Home</a></div>
+            <div class="nav-item"><a href="/resume">Résumé</a></div>
+            <div class="nav-item"><a href=".">Contact</a></div>
 
-                <h1>Colin Greybosh</h1>
-                <div class="nav-item"><a href="/">Home</a></div>
-                <div class="nav-item"><a href=".">Contact</a></div>
-                <div class="nav-item"><a href="/resume">Résumé</a></div>
+        </nav>
 
-            </nav>
+    </header>
 
-        </header>
+    <div class="container text">
 
-        <div class="container section">
+        <h2>Contact Me!</h2>
 
-            <h2>Contact Me!</h2>
+        <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
 
-            <p>Have any questions? Feel free to send me an email using this form I provided below.</p>
+        <form method="post">
 
-            <form method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" name="message" required></textarea>
 
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" name="message" required></textarea>
+            <div class="doubleColumn">
 
-                <div class="doubleColumn">
+                <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
 
-                    <div class="g-recaptcha" data-sitekey="6LfvBBsUAAAAAKeIEmOKMPEGyRg--uClpXwYZx24"></div>
+                <input type="submit" id="send" name="send" value="Send Message">
 
-                    <input type="submit" id="send" name="send" value="Send Message">
+            </div>
 
-                </div>
+            <div class="response">
+                <?php
+                    if ($formSubmitted)
+                    {
+                        $popupText = ($success) ? '<p id="was-sent">Your message has been sent!</p>' : 
+                                                  '<p id="has-error">Something went wrong! Your message was not sent.</p>';
+                        echo $popupText;
+                    } 
 
-                <div class="response">
-                    <?php
-                        if ($formSubmitted)
-                        {
-                            $popupText = ($success) ? '<p id="was-sent">Your message has been sent!</p>' : 
-                                                      '<p id="has-error">Something went wrong! Your message was not sent.</p>';
-                            echo $popupText;
-                        } 
+                    $variables = array_keys(get_defined_vars());
 
-                        $variables = array_keys(get_defined_vars());
+                    for ($i = 0; $i < sizeof($variables); $i++) 
+                    {
+                        unset($variables[$i]);
+                    }
+                    unset($variables, $i);
+                ?>
+            </div>
 
-                        for ($i = 0; $i < sizeof($variables); $i++) 
-                        {
-                            unset($variables[$i]);
-                        }
-                        unset($variables, $i);
-                    ?>
-                </div>
-
-            </form>
-
-        </div>
+        </form>
 
     </div>
+
+    <footer>
+        <div>
+            <p class="italic">Copyright &copy; <?php echo date("Y"); ?> Colin Greybosh</p>
+            <p></p>
+            <p></p>
+        </div>
+        <div>
+            <p></p>
+            <p></p>
+            <p></p>
+        </div>
+
+    </footer>
 
 </body>
 </html>

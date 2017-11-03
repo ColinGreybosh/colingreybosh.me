@@ -66,6 +66,10 @@ input:focus, textarea:focus {
     max-width: 550px;
 }
 
+.text {
+    border: none !important;
+}
+
 .g-recaptcha {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
