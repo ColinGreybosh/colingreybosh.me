@@ -91,8 +91,8 @@
             <h2>Employment/Work</h2>
             <ul>
                 <li><p><span style="font-weight: bold">Weis Markets:</span> Store Attendant and Sales Associate</p></li>
-                <li><p><span style="font-weight: bold">Saint Gabriel's Church:</span> Monthy dinner volunteering</p></li>
-                <li><p><span style="font-weight: bold">Davis Manor South:</span> Monthy bingo night volunteering</p></li>
+                <li><p><span style="font-weight: bold">Saint Gabriel's Church:</span> Monthly dinner volunteering</p></li>
+                <li><p><span style="font-weight: bold">Davis Manor South:</span> Monthly bingo night volunteering</p></li>
             </ul>
         </div>
 
