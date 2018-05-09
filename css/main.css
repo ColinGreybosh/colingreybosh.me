@@ -32,18 +32,22 @@ nav h1 {
 }
 
 nav h1::after {
-    content: "/";
+    content: " ";
     margin: 0 0 0 1rem;
 }
 
+.nav-item {
+    margin-left: auto;
+}
+
 .nav-item:not(:last-child)::after {
-    content: "|";
+    content: " ";
     margin: 0 0.5rem;
 }
 
 .nav-item a {
     -webkit-transition-duration: 0.33s;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     transition-duration: 0.33s;
 
     /* Removes highlights created by tapping on navigation links */
@@ -82,7 +86,7 @@ nav h1::after {
     line-height: 2.2rem;
     margin: 0 auto;
     max-width: 2000px;
-    padding: 2rem 5rem;
+    padding: 2rem 8rem;
 }
 
 .text:not(:last-child) {
@@ -91,6 +95,7 @@ nav h1::after {
 
 .text h2 {
     font-size: 1.8rem;
+    margin-bottom: 0;
 }
 
 .text li p {
@@ -102,8 +107,7 @@ nav h1::after {
 }
 
 .text p {
-    font-size: 1.5rem;
-    text-indent: 2.5rem;
+    font-size: 1.25rem;
 }
 
 p a:link, p a:visited {
@@ -122,25 +126,30 @@ footer {
     background: #250001;
     border-top: 3px solid black;
     color: #F3F3F3;
-    display: flex;
-    flex-direction: row;
     height: auto;
     justify-content: center;
     padding: 2rem 0;
     width: 100%;
 }
 
-footer * {
-    align-items: stretch;
+footer div {
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 1rem 0;
 }
 
-footer * * {
-    padding: 0rem 5rem;
-    font-size: 1.2rem;
+.social {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.social a {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.25rem;
 }
 
 footer::first-child * {
@@ -154,6 +163,7 @@ footer::last-child * {
 @media screen and (max-width: 832px) {
     nav {
         flex-wrap: wrap;
+        justify-content: flex-start;
         height: auto;
     }
 
@@ -167,10 +177,14 @@ footer::last-child * {
         content: none;
     }
 
+    .nav-item {
+        margin-left: 0;
+    }
+
     .container {
         margin: 0 auto;
         max-width: 2000px;
-        padding: 0.5rem 1rem;
+        padding: 2rem 2rem;
     }
 
     footer {
@@ -183,7 +197,7 @@ footer::last-child * {
     }
 }
 
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 462px) {
     nav {
         align-items: center;
         flex-direction: column;
@@ -200,8 +214,11 @@ footer::last-child * {
         content: none;
     }
 
-    .nav-item {
+    .nav-item:nth-child(n+3) {
         border-top: 2px solid white;
+    }
+
+    .nav-item {
         text-align: center;
         width: 130px;
     }
