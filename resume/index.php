@@ -22,9 +22,11 @@
     <header>
         <nav>
             <h1>Colin Greybosh</h1>
-            <div class="nav-item"><a href="/">Home</a></div>
-            <div class="nav-item"><a href=".">Résumé</a></div>
-            <div class="nav-item"><a href="/contact">Contact</a></div>
+            <div class="nav-cont">
+                <div class="nav-item"><a href=".">Home</a></div>
+                <div class="nav-item"><a href="/resume">Résumé</a></div>
+                <div class="nav-item"><a href="/contact">Contact</a></div>
+            </div>
         </nav>
     </header>
 
