@@ -87,6 +87,8 @@ nav h1::after {
     margin: 0 auto;
     max-width: 2000px;
     padding: 2rem 8rem;
+
+    color: #303030;
 }
 
 .text:not(:last-child) {
