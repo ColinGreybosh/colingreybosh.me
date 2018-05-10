@@ -15,8 +15,8 @@
 
     <title>Home | Colin Greybosh</title>
     <link rel="stylesheet" href="/css/normalize.min.css">
-    <link rel="stylesheet" href="/css/main.min.css" media="screen">
-    <link rel="stylesheet" href="/css/ubuntu.css">
+    <link rel="stylesheet" href="/css/main.min.css"  media="screen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu">
     <link rel="icon" href="/favicon.png">
     
 </head>

@@ -14,7 +14,7 @@
     <title>Résumé | Colin Greybosh</title>
     <link rel="stylesheet" href="/css/normalize.min.css">
     <link rel="stylesheet" href="/css/main.min.css"  media="screen">
-    <link rel="stylesheet" href="/css/ubuntu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Ubuntu">
     <link rel="icon" href="/favicon.png">
 
 </head>
@@ -23,8 +23,8 @@
         <nav>
             <h1>Colin Greybosh</h1>
             <div class="nav-cont">
-                <div class="nav-item"><a href=".">Home</a></div>
-                <div class="nav-item"><a href="/resume">Résumé</a></div>
+                <div class="nav-item"><a href="/">Home</a></div>
+                <div class="nav-item"><a href=".">Résumé</a></div>
                 <div class="nav-item"><a href="/contact">Contact</a></div>
             </div>
         </nav>

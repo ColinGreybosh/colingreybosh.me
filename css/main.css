@@ -2,8 +2,17 @@
     box-sizing: border-box !important;
 }
 
-html, .container {
+html {
+    background: #262626;
+    height: 100%;
+    font-family: "Ubuntu", "Segoe UI", sans-serif;
+}
+
+.container {
     background: white;
+}
+
+html, .container {
     font-family: "Ubuntu", "Segoe UI", sans-serif;
 }
 
@@ -84,8 +93,8 @@ nav h1 {
     margin: 0 auto;
     max-width: 2000px;
     padding: 2rem 8rem;
-
     color: #303030;
+    font-family: "Source Sans Pro", "Segoe UI", sans-serif;
 }
 
 .text:not(:last-child) {
@@ -94,7 +103,7 @@ nav h1 {
 
 .text h2 {
     font-size: 1.8rem;
-    margin-bottom: 0;
+    margin: 0.5rem 0;
 }
 
 .text li p {
