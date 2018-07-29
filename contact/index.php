@@ -16,7 +16,7 @@
 
     // Initialize the variable $ini with the array
     // returned from parsing the config.ini file
-    $ini = parse_ini_file('includes/config.ini');
+    $ini = parse_ini_file('../../includes/config.ini');
 
     // $ini is not null, initialize these variables
     // with the values contained within config.ini
