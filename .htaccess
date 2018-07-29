@@ -18,7 +18,7 @@ ExpiresDefault "access 1 month"
 </IfModule>
 
 <Files .htaccess>
-Order allow, deny
+Order allow,deny
 Deny from all
 </Files>
 
