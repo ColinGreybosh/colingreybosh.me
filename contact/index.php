@@ -2,7 +2,7 @@
 <html lang="en">
 
 <?php
-        // Display errors on web page
+    // Display errors on web page
 	ini_set('display_errors', 0);
 	
 	// Use the composer autoloader
@@ -90,7 +90,6 @@
 			$formSubmitted = true;
 		}
 	}
->>>>>>> 840efefcb0dbcac362c950fd4ca90cc6ff19a049
 ?>
 
 <head>
