@@ -17,11 +17,3 @@ ExpiresByType image/x-icon "access 1 year"
 ExpiresDefault "access 1 month"
 </IfModule>
 
-<Files .htaccess>
-Order allow,deny
-Deny from all
-</Files>
-
-Options -Indexes
-IndexIgnore *.ini
-
