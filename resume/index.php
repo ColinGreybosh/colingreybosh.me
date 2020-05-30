@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="I am currently a senior in high school and am taking classes such as Calculus III and Java II."/>
+
     <meta name="author" content="Colin Greybosh">
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="3 days">
@@ -18,7 +18,7 @@
     <link rel="icon" href="/favicon.png">
 </head>
 <body>
-  <header>
+<!--  <header>
     <nav>
       <h1>Colin Greybosh</h1>
       <div class="nav-cont">
@@ -187,6 +187,6 @@
         </div>
         <p>Copyright &copy; <?php echo date("Y"); ?> Colin Greybosh</p>
     </div>
-  </footer>
+  </footer> -->
 </body>
 </html>
