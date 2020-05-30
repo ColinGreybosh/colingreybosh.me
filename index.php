@@ -25,61 +25,12 @@
       <div class="nav-cont">
         <div class="nav-item"><a href=".">Home</a></div>
         <div class="nav-item"><a href="/resume">Résumé</a></div>
-        <div class="nav-item"><a href="/contact">Contact</a></div>
       </div>
     </nav>
     <div class="img-cont">
       <img src="img/Colin%20Greybosh%20-%20Hawk%20Mountain.jpg" alt="A landscape picture from Hawk Mountain; Taken by Colin Greybosh"/>
     </div>  
   </header>
-
-  <div class="container">
-    <div class="text">
-      <p>
-        Welcome to my website! I am Colin Greybosh, an undergraduate student at MIT who is
-        pursuing a major in Course 6-3, Computer Science and Engineering. I attended the Hazleton
-        Area Academy of Science in high school, where I completed courses such as Honors Calculus 
-        III, Java II, EDSGN 100 with Penn State Hazleton, AP Calculus AB, and Spanish IV.
-      </p>
-      <p>
-        Although I am learning Java in school, I have been teaching myself C++ for a couple years. A 
-        couple projects include research for my last entry in the Pennsylvania Junior Academy of 
-        Science and a zero-player game that is currently in development. Learning C++ and programming 
-        in general has really enhanced my understanding of math along with my problem-solving skills.
-      </p>
-      <p>
-        I have been participating in the Pennsylvania Junior Academy of Science since 8th grade. Up to 
-        the present, I had always entered projects into the physics category and taken second place in 
-        regionals; however, my first presentation I entered into computer science earned me a first 
-        award. Based on the Chudnovsky algorithm for calculating Pi, I created a program that tests 
-        the speed and accuracy differences between double-precision and arbitrary-precision 
-        arithmetic. As it was my first year competing in computer science, it was a bit daunting to 
-        step in front of judges and present, but I persevered and was pleasantly surprised at the 
-        result.
-      </p>
-      <p>
-        Since I never received a first award before, it was my also first time going to the Penn State 
-        campus at State College to compete. My perseverance paid off though; I was given a first award 
-        with a perfect score along with an excellence recognition prize. After having the opportunity 
-        to travel to State College and experience the PJAS state competition, I must say that I am 
-        happy that the past three years of receiving second place did not dissuade me from trying.
-      </p>
-      <p>
-        I am scheduled to attend the PJAS state competition in my senior year also; my project was 
-        once again in the computer science category. I focused on calculating the difference in 
-        efficiency between multithreaded, random algorithms and single-threaded infinite series. I 
-        used a Pi calculation as an example once again due to the large history of attempts at 
-        approximating the constant as accurately as possible.
-      </p>
-      <p>
-        There is a collection of different projects I am working on posted on my 
-        <a href="https://github.com/ColinGreybosh" rel="noopener" target="_blank">Colin Greybosh</a> 
-        Github account with Java-related Android development content from my current class being my 
-        most recent work. I would love constructive criticism if anybody happens to take a look!+
-      </p>
-    </div>
-  </div>
-
   <footer>
   <div>
     <div class="social">
