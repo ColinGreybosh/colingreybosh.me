@@ -21,7 +21,7 @@
 <body>
   <div class="name">Colin Greybosh</div>
   <div class="title">Software Engineer</div>
-  <div class="link"><a href="./resume/resume.pdf">Résumé</a></div>
+  <div class="link"><a href="./resume/">Résumé</a></div>
   <div class="link"><a href="https://github.com/ColinGreybosh">GitHub</a></div>
   <div class="link"><a href="https://www.linkedin.com/in/ColinGreybosh">LinkedIn</a></div>
   <div class="link"><a href="https://twitter.com/ColinGreybosh">Twitter</a></div>
