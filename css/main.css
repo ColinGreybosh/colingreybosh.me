@@ -6,55 +6,32 @@ html {
     background: #262626;
     height: 100%;
     font-family: "Ubuntu", "Segoe UI", sans-serif;
-}
-
-.container {
-    background: white;
-}
-
-html, .container {
-    font-family: "Ubuntu", "Segoe UI", sans-serif;
-}
-
-nav {
-    align-items: center;
-    background: #C72400;
-    border-bottom: 3px solid black;
-    border-top: 3px solid black;
-    display: flex;
-    flex-direction: row;
-    height: 5rem;
-    justify-content: space-between;
-    padding: 1rem 4rem;
-    width: 100%;
-}
-
-nav * {
     color: white;
-    font-size: 2.2rem;
-    line-height: 2.5rem;
-    text-decoration: none;
 }
 
-nav h1 {
-    margin: 0 1rem 0 0;
+body {
+    margin: 6rem;
 }
 
-.nav-cont {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+.name {
+    font-size: 2.5rem;
 }
 
-.nav-item:not(:first-child) {
-    margin-left: 3rem;
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.nav-item a {
+.link {
+    margin: 0.25rem 0;
+}
+
+.link a {
     -webkit-transition-duration: 0.33s;
     font-size: 1.8rem;
     transition-duration: 0.33s;
+    color: white;
+    text-decoration: none;
 
     /* Removes highlights created by tapping on navigation links */
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -67,171 +44,24 @@ nav h1 {
 }
 
 
-.nav-item a:hover, .nav-item a:focus {
-    text-shadow: 3px 3px black;
+.link a:hover, .nav-item a:focus {
+    text-shadow: 2px 2px #C72400;
     outline: none;
 }
 
-.nav-item a:active {
+.link a:active {
     font-weight: bold;
-    text-shadow: 0px 0px black;
+    text-shadow: 0 0 #C72400;
 }
 
-.img-cont {
-    border-bottom: 3px solid black;
-    height: calc(100vw * 9/16 - 5rem);
-    overflow: hidden;
-    width: 100%;
+#copyright {
+    color: white;
+    margin-top: 1rem;
+    float: bottom;
 }
 
-.img-cont img {
-    width: 100%;
-}
-
-.container {
-    line-height: 2.2rem;
-    margin: 0 auto;
-    max-width: 2000px;
-    padding: 2rem 8rem;
-    color: #303030;
-    font-family: "Source Sans Pro", "Segoe UI", sans-serif;
-}
-
-.text:not(:last-child) {
-    border-bottom: 2px solid black;
-}
-
-.text h2 {
-    font-size: 1.8rem;
-    margin: 0.5rem 0;
-}
-
-.text li p {
-    text-indent: 0;
-}
-
-.text p:first-child {
-    margin-top: 0;
-}
-
-.text p {
-    font-size: 1.25rem;
-}
-
-p a:link, p a:visited {
-    color: #C72400;
-    margin: 0 !important;
-    text-decoration: none;
-}
-
-p a:hover, p a:focus, p a:active {
-    color: #C72400;
-    text-decoration: underline;
-}
-
-footer {
-    align-items: stretch;
-    background: #262626;
-    border-top: 3px solid black;
-    color: #F3F3F3;
-    height: auto;
-    justify-content: center;
-    padding: 2rem 0;
-    width: 100%;
-}
-
-footer div {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.social {
-    display: flex;
-    flex-direction: row;
-    align-content: space-between;
-}
-
-.social a {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    margin: 0.25rem;
-}
-
-footer::first-child * {
-    padding-right: 0;
-}
-
-footer::last-child * {
-    padding-left: 0;
-}
-
-@media screen and (max-width: 832px) {
-    nav {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        height: auto;
-    }
-
-    nav h1 {
-        margin-right: 0;
-        text-align: left;
-        width: 100vw;
-    }
-
-    nav h1::after {
-        content: none;
-    }
-
-    .nav-item {
-        margin-left: 0;
-    }
-
-    .container {
-        margin: 0 auto;
-        max-width: 2000px;
-        padding: 2rem 2rem;
-    }
-
-    footer {
-        padding: 2rem 1rem;
-        flex-direction: column;
-    }
-
-    footer * * {
-        padding: 0;
-    }
-}
-
-@media screen and (max-width: 534px) {
-    nav {
-        align-items: center;
-        flex-direction: column;
-        padding: initial 1rem;
-    }
-
-    nav h1 {
-        margin-bottom: 0.5rem;
-        text-align: center;
-        width: 100%;
-    }
-
-    .nav-cont {
-        flex-direction: column;
-    }
-
-    .nav-cont:not(:first-child) {
-        border-top: 2px solid white;
-    }
-
-    .nav-item:not(:first-child) {
-        margin-left: 0;
-    }
-
-    .nav-item {
-        text-align: center;
-        width: 130px;
+@media screen and (max-width: 468px) {
+    body {
+        margin: 2rem;
     }
 }
