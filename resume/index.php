@@ -12,7 +12,7 @@
     <meta name="revisit-after" content="3 days">
     <meta name="theme-color" content="#C72400">
 
-    <meta http-equiv="refresh" content="0; URL=https://colingreybosh.me/resume/resume.pdf">
+    <meta http-equiv="refresh" content="0; URL=https://drive.google.com/file/d/1lkmpkiiGa1CAXt2ws7Q8-sAcd18R5Tcl/view?usp=sharing">
 
     <title>Résumé | Colin Greybosh</title>
     <link rel="stylesheet" href="../css/normalize.min.css">
